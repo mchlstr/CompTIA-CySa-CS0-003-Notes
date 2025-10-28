@@ -24,3 +24,17 @@ Assessment tool output: analyzing network scanning, web application scanners, vu
 ## Reporting and communication (17%)
 - **Vulnerability management reporting:** explaining compliance reports, action plans, inhibitors to remediation, metrics, key performance indicators (KPIs), and stakeholder communication.
 - **Incident response reporting:** explaining incident declaration, escalation, reporting, communication, root cause analysis, lessons learned, and metrics and KPIs.
+
+
+## Repository Overview
+
+| Folder | Description |
+|--------|-------------|
+| [00_glossary_and_references](./00_glossary_and_references) | Key acronyms, terminology, and reference material. |
+| [01_security_operations](./01_security_operations) | Security operations concepts, system/network architecture, monitoring, and automation. |
+| [02_vulnerability_management](./02_vulnerability_management) | Vulnerability scanning, analysis, prioritization, and mitigation. |
+| [03_incident_response_and_management](./03_incident_response_and_management) | Incident response frameworks, processes, and hands-on case studies. |
+| [04_reporting_and_communication](./04_reporting_and_communication) | Reporting techniques for vulnerabilities and incidents. |
+| [05_tools](./05_tools_and_scripts) | Overview of cybersecurity tools with practical usage notes. |
+
+---
