@@ -1,0 +1,3 @@
+- Overview of SecOps
+- Importance of system/network architecture
+- Layers of defense
