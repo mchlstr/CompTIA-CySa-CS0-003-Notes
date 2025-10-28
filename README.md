@@ -33,7 +33,7 @@ Assessment tool output: analyzing network scanning, web application scanners, vu
 | [00_glossary_and_references](./00_glossary_and_references) | Key acronyms, terminology, and reference material. |
 | [01_security_operations](./01_security_operations) | Security operations concepts, system/network architecture, monitoring, and automation. |
 | [02_vulnerability_management](./02_vulnerability_management) | Vulnerability scanning, analysis, prioritization, and mitigation. |
-| [03_incident_responsemanagement](./03_incident_response_management) | Incident response frameworks, processes, and hands-on case studies. |
+| [03_incident_response_management](./03_incident_response_management) | Incident response frameworks, processes, and hands-on case studies. |
 | [04_reporting_and_communication](./04_reporting_and_communication) | Reporting techniques for vulnerabilities and incidents. |
 | [05_tools](./05_tools) | Overview of cybersecurity tools with practical usage notes. |
 
