@@ -1,7 +1,8 @@
 ## CySA+ CS0-003 Key Term Glossary
 
-| 802.1X | A standard for encapsulating EAP (Extensible Authentication Protocol) communications over a LAN or wireless LAN, providing port-based authentication. |
+| Term | Definition |
 | :---- | :---- |
+| 802.1X | A standard for encapsulating EAP (Extensible Authentication Protocol) communications over a LAN or wireless LAN, providing port-based authentication. |
 | AbuseIPDB | A community-driven database that keeps track of IP addresses reported for abusive behavior. |
 | Access Control List (ACL) | A list of permitted and denied network connections based on either IP addresses, ports, or applications in use. |
 | Advanced Persistent Threat (APT) | An attacker who establishes a long-term presence on a network to gather sensitive information. An attacker's ability to obtain, maintain, and diversify access to network systems using exploits and malware. |
@@ -231,7 +232,6 @@
 | Tabletop Exercise (TTX) | An exercise that uses an incident scenario against a framework of controls or a red team in a discussion-based format. |
 | Tactics, Techniques, and Procedures (TTPs) | A description of how adversaries operate: tactics are goals, techniques are methods, and procedures are specific implementations. |
 | tcpdump | A data-network packet analyzer computer program that runs under a command-line interface. |
-| Term | Definition |
 | Threat Actors | Those who wish to harm networks or steal secure data. |
 | Threat Hunting | A cybersecurity technique designed to detect the presence of threats that have not been discovered by normal security monitoring. |
 | Threat Modeling | The process of identifying and assessing the possible threat actors and attack vectors that pose a risk to the security of an app, network, or other system. |
