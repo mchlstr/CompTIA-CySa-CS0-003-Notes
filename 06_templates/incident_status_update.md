@@ -1,10 +1,10 @@
 # Incident Status Update
 
-**Incident ID:** `<INC-YYYY-NNNN>`
-**Update #:** `<sequential number>`
-**Time:** `<YYYY-MM-DD HH:MM TZ>`
-**Author:** `<name, role>`
-**Distribution:** `<list — IR team, leadership, etc.>`
+- **Incident ID:** `<INC-YYYY-NNNN>`
+- **Update #:** `<sequential number>`
+- **Time:** `<YYYY-MM-DD HH:MM TZ>`
+- **Author:** `<name, role>`
+- **Distribution:** `<list — IR team, leadership, etc.>`
 
 ---
 
@@ -65,7 +65,7 @@
 
 There is no single mandated format for incident status updates. This structure synthesises common SOC and IR-team practice as documented in:
 
-- **NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide**, §3.2.6 (incident communication) and §3.4.1 (information sharing): https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf
+- **NIST SP 800-61r3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management (CSF 2.0 Community Profile, April 2025)** — covers communication and information sharing aligned with CSF 2.0 Respond/Recover functions: https://csrc.nist.gov/pubs/sp/800/61/r3/final
 - **SANS Incident Handler's Handbook** (covers communication cadence): https://www.sans.org/white-papers/33901/
 - **ENISA — Good Practice Guide for Incident Management**: https://www.enisa.europa.eu/publications/good-practice-guide-for-incident-management
 - **FIRST CSIRT Services Framework** (defines reporting and information-sharing services): https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1

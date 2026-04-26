@@ -105,7 +105,7 @@ Three pillars:
 - [03_03 Preparation and post-incident](../03_incident_response_management/03_03_preparation_and_post_incident.md) — playbooks live here too
 
 **External:**
-- [NIST SP 800-61 — Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
+- [NIST SP 800-61r3 — Incident Response Recommendations (CSF 2.0 Community Profile, April 2025)](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
 - [Gartner — SOAR market guide](https://www.gartner.com/en/information-technology/glossary/security-orchestration-automation-response-soar)
 - [Splunk SOAR (formerly Phantom)](https://www.splunk.com/en_us/products/splunk-security-orchestration-and-automation.html)
 - [Tines — workflow automation](https://www.tines.com/)

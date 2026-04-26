@@ -1,13 +1,13 @@
 # Incident Final Report — `<Incident ID>`
 
-**Title:** `<short descriptive title>`
-**Severity (final):** `<Sev N>`
-**Status:** Closed
-**Date opened:** `<YYYY-MM-DD HH:MM TZ>`
-**Date closed:** `<YYYY-MM-DD HH:MM TZ>`
-**Report author:** `<name>`
-**Report version:** `<x.y>`
-**Distribution:** `<internal-only | restricted | redacted version for external>`
+- **Title:** `<short descriptive title>`
+- **Severity (final):** `<Sev N>`
+- **Status:** Closed
+- **Date opened:** `<YYYY-MM-DD HH:MM TZ>`
+- **Date closed:** `<YYYY-MM-DD HH:MM TZ>`
+- **Report author:** `<name>`
+- **Report version:** `<x.y>`
+- **Distribution:** `<internal-only | restricted | redacted version for external>`
 
 ---
 
@@ -132,9 +132,9 @@
 
 ## References
 
-This template follows the structure recommended in **NIST SP 800-61 Rev. 2** (especially Appendix A — sample incident-handling forms) and the SANS PICERL framework. It mirrors the reporting structure expected by US-CERT/CISA and most regulators.
+This template follows the structure recommended in **NIST SP 800-61r3** and the SANS PICERL framework. It mirrors the reporting structure expected by CISA and most regulators.
 
-- **NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide**, including sample report fields in Appendix A: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf
+- **NIST SP 800-61r3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management (CSF 2.0 Community Profile, April 2025)**: https://csrc.nist.gov/pubs/sp/800/61/r3/final
 - **SANS Incident Handler's Handbook (PICERL)**: https://www.sans.org/white-papers/33901/
 - **ENISA — Good Practice Guide for Incident Management**: https://www.enisa.europa.eu/publications/good-practice-guide-for-incident-management
 - **CISA — Incident Reporting** (federal incident notification format): https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cisa-coordinated-vulnerability-disclosure-process

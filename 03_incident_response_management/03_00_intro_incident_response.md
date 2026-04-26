@@ -92,6 +92,6 @@ Severity drives who's involved, how fast, and what disclosures may be required.
 - [04_02 Incident reporting](../04_reporting_and_communication/04_02_incident_reporting.md)
 
 **External:**
-- [NIST SP 800-61r2 — Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
+- [NIST SP 800-61r3 — Incident Response Recommendations (CSF 2.0 Community Profile, April 2025)](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
 - [SANS Incident Handler's Handbook](https://www.sans.org/white-papers/33901/)
 - [FIRST — Computer Security Incident Response Teams](https://www.first.org/)

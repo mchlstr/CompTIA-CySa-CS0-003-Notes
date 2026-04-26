@@ -1,9 +1,9 @@
 # Compensating Control Documentation
 
-**Control ID:** `<unique identifier>`
-**Date implemented:** `<YYYY-MM-DD>`
-**Owner:** `<name, role>`
-**Linked finding / standard:** `<vuln ID, PCI DSS req, ISO control, etc.>`
+- **Control ID:** `<unique identifier>`
+- **Date implemented:** `<YYYY-MM-DD>`
+- **Owner:** `<name, role>`
+- **Linked finding / standard:** `<vuln ID, PCI DSS req, ISO control, etc.>`
 
 ---
 

@@ -22,7 +22,7 @@ There is **no single universally-mandated template** for most of these documents
 A few are directly derived from a specific standard:
 - The **compensating control worksheet** mirrors the structure required by **PCI DSS v4.x Appendix E** ("Compensating Controls Worksheet").
 - The **vulnerability finding** structure mirrors **CVE/NVD** entries and **CVSS** vector formatting.
-- The **incident final report** follows **NIST SP 800-61r2 Appendix A** sample format.
+- The **incident final report** structure aligns with **NIST SP 800-61r3** (April 2025 — https://csrc.nist.gov/pubs/sp/800/61/r3/final).
 - The **breach notification** follows requirements in **GDPR Art. 34**, US state breach laws, and HIPAA — see California AG's [public list of submitted notices](https://oag.ca.gov/privacy/databreach/list) for real examples.
 
 Always check what your specific regulator, framework, or contract requires before sending anything externally.

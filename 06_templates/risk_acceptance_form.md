@@ -1,9 +1,9 @@
 # Risk Acceptance Form
 
-**Risk ID:** `<unique identifier>`
-**Date submitted:** `<YYYY-MM-DD>`
-**Requested by:** `<name, role>`
-**Owner / sponsor:** `<accountable manager>`
+- **Risk ID:** `<unique identifier>`
+- **Date submitted:** `<YYYY-MM-DD>`
+- **Requested by:** `<name, role>`
+- **Owner / sponsor:** `<accountable manager>`
 
 ---
 
