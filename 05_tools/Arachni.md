@@ -1,7 +1,7 @@
 # Arachni
 
 ## What it is
-Open-source web application security scanner focused on identifying web vulnerabilities.
+An open-source web application security scanner focused on identifying web vulnerabilities.
 
 ## Purpose
 Detect common web vulnerabilities and provide actionable findings for remediation.
@@ -18,4 +18,7 @@ Detect common web vulnerabilities and provide actionable findings for remediatio
 
 ## Tips
 - Tune scan profiles to reduce false positives.  
-- Always test against staging or authorised targets only.
+- Always test against staging or authorized targets only.
+
+## Note
+- As of Apr 25, 2026 repository https://github.com/Arachni/arachni has been archived by the owner
