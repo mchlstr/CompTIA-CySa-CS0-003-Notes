@@ -242,6 +242,40 @@ CySA+ assumes you can identify a service from its port number. Memorize the high
 
 **Exam tip:** if you see an alert with port 445 between two internal hosts where they don't normally talk → suspect lateral movement. Port 22 from external IP repeatedly → SSH brute force.
 
+## NetFlow and flow data
+
+**NetFlow** (Cisco) and equivalents (**sFlow**, **IPFIX** = open standard, **jFlow** = Juniper) report **metadata** about network conversations — not packet contents.
+
+A flow record typically contains: source/dest IP, source/dest port, protocol, packet count, byte count, start/end time, TCP flags, ToS.
+
+**Why analysts use it:**
+- Lightweight (orders of magnitude less storage than full pcap).
+- Network-wide visibility (every router/switch can export flows).
+- Long-retention friendly — keep a year of metadata where pcap would be impossible.
+- Excellent for **beaconing detection**, **lateral movement**, **data exfil volume analysis**.
+
+**Limitations:**
+- No payload — can't read what was sent.
+- Encrypted traffic looks the same in flows as anything else (which is the point).
+
+**Tools:** SiLK, Argus, **Zeek conn.log** (similar concept), commercial NDR (ExtraHop, Vectra, Darktrace, Corelight).
+
+## UEBA (User and Entity Behaviour Analytics)
+
+**UEBA** = automatically baselining "normal" behaviour for each user and entity (host, service account), then flagging deviations.
+
+- **Inputs:** auth logs, file access, network flows, application activity.
+- **Outputs:** risk scores per user/entity, prioritised alerts.
+- **Detects:** account compromise (impossible travel, off-hours, new device), insider threat (mass downloads, unusual share access), lateral movement (account suddenly hitting new hosts), service-account abuse (interactive logon by a service account).
+
+**Where it lives:**
+- Built into modern SIEMs (Splunk UBA, Microsoft Sentinel, Securonix, Exabeam, IBM QRadar UBA).
+- Often part of **XDR** stacks.
+- Some IdPs (Okta, Microsoft Entra ID Protection) include identity-only UEBA.
+
+**Strengths:** catches "low-and-slow" and credential-misuse attacks that signature/correlation rules miss.
+**Limitations:** noisy until tuned; baseline-poisoning if the attacker is in long enough to look "normal."
+
 ## Related
 
 **Internal:**

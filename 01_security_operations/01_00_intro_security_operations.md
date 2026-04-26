@@ -45,6 +45,30 @@ Typical layers, outside-in:
 
 **Exam angle:** when asked "best control to add" — look for what *layer* is missing, not just what's powerful. Adding another firewall when the gap is endpoint detection won't help.
 
+## Control type categories
+
+CySA+ tests recognition of security controls by **what they do** (function) and **how they're delivered** (type).
+
+### By function
+
+| Function | What it does | Examples |
+|---|---|---|
+| **Preventive** | Stops an attack before it succeeds | Firewall, MFA, encryption, hardening, allowlisting |
+| **Detective** | Identifies that an attack happened or is happening | SIEM alerts, IDS, log monitoring, EDR, audit logs |
+| **Corrective** | Limits damage and restores after a detected event | Patching, AV cleanup, restore from backup, IR actions |
+| **Deterrent** | Discourages the attempt | Visible cameras, warning banners, signed AUPs |
+| **Compensating** | Substitute when the primary control isn't possible | WAF in front of unpatched app; segmentation around legacy host |
+| **Directive** | Mandates behaviour (policy / procedure) | Security policy, AUP, mandated training |
+| **Recovery** | Restores systems and data | Backups, DR site, failover |
+
+### By type
+
+- **Administrative / managerial** — policies, procedures, training, background checks.
+- **Technical / logical** — firewalls, encryption, IAM, EDR, MFA.
+- **Physical** — locks, badges, cameras, mantraps.
+
+**Exam tip:** a single control can be in **multiple functions** — a security camera is both **detective** *and* **deterrent**; a WAF is both **preventive** *and* **compensating*. When asked to classify, pick the function that best matches the *intent* the scenario describes.
+
 ## Related
 
 **Internal:**

@@ -89,6 +89,46 @@ CASBs are often part of a **SASE/SSE** stack now (Netskope, Zscaler, Microsoft D
 
 **Exam tip:** if a question is about controlling SaaS use or detecting shadow IT → CASB.
 
+## Access control models
+
+How the system decides *who* gets access to *what*. CySA+ expects recognition of each model by its decision logic.
+
+- **DAC (Discretionary Access Control)** — the **owner** of a resource decides who can access it. Flexible; standard in commercial OSes (Windows NTFS, Linux file permissions). Weakness: easy to misconfigure; permissions sprawl.
+
+- **MAC (Mandatory Access Control)** — the **system** enforces access based on **labels and clearances** set by a central authority. Users cannot delegate. Used in military / classified environments (SELinux, Trusted Solaris). Strongest, least flexible.
+
+- **RBAC (Role-Based Access Control)** — permissions are assigned to **roles**, and users get permissions through role membership. The standard for enterprise systems. Scales better than DAC.
+
+- **ABAC (Attribute-Based Access Control)** — decisions evaluate **attributes** of the subject (department, clearance), object (sensitivity, owner), and environment (time, location, device posture). Most flexible; foundation of Zero Trust and cloud IAM (AWS IAM Conditions, Azure Conditional Access).
+
+- **Rule-Based Access Control** — uses **explicit rules** defined by an admin ("no access from non-corporate networks after hours"). Often combined with another model.
+
+> Note: "MAC" is overloaded — it also means **Media Access Control** (Layer 2 address). Context disambiguates.
+
+**Exam tip:** owner decides → DAC. Labels + clearances → MAC. Role membership → RBAC. Attribute / context-driven → ABAC. If-then rules → Rule-Based.
+
+## Credential-based attacks (Active Directory)
+
+Common AD authentication attacks. CySA+ frequently shows you Mimikatz output or a Kerberos event and expects identification.
+
+- **Pass-the-Hash (PtH)** — attacker obtains an NTLM hash (often from LSASS via Mimikatz) and authenticates with the hash directly, no cracking needed. Defence: disable LM/NTLMv1, **Credential Guard**, **LSA Protection**, tier-0 admin separation, restrict NTLM.
+
+- **Pass-the-Ticket (PtT)** — attacker steals a Kerberos TGT or service ticket from memory and reuses it. Defence: short ticket lifetimes, alert on tickets used from unusual hosts.
+
+- **Golden Ticket** — attacker with the **krbtgt** account hash forges arbitrary Kerberos TGTs valid for years by default. Effectively permanent domain admin. Defence: **rotate krbtgt twice**, 10+ hours apart, when AD compromise is suspected; protect DCs; tier-0 model.
+
+- **Silver Ticket** — attacker forges a Kerberos **service ticket** using a service-account hash. Scope is one service, but stealthier (the DC is never contacted).
+
+- **Kerberoasting** — attacker requests TGS tickets for service accounts with SPNs, then **offline-cracks** the encrypted portion to recover the password. Defence: long random service-account passwords (25+ chars) or gMSAs; monitor anomalous **Event 4769** patterns.
+
+- **AS-REP Roasting** — accounts with *"Do not require Kerberos preauthentication"* enabled return AS-REP responses crackable offline. Defence: ensure preauth is required on every account.
+
+- **DCSync** — attacker with replication rights uses MS-DRSR to pull password hashes from a DC, posing as a DC itself. Often the path to dumping krbtgt for a Golden Ticket. Defence: monitor for replication requests from non-DC hosts; tightly restrict replication rights.
+
+- **DCShadow** — attacker registers a rogue DC and pushes malicious changes into AD. Stealthier than DCSync.
+
+**Exam tip:** Mimikatz / LSASS dumping → PtH, Golden Ticket, or DCSync. Service-account ticket cracking → Kerberoasting. "Forged tickets valid for years" → Golden Ticket. Standard defences: **tier-0 separation, krbtgt rotation, Credential Guard / LSA Protection, monitor Event 4769 patterns.**
+
 ## Related
 
 **Internal:**

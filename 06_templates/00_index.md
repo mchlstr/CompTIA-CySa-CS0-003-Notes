@@ -13,6 +13,9 @@ Reusable fill-in-the-blank templates for common SOC / VM / IR documents. Copy a 
 - [Incident final report / after-action](incident_final_report.md) — post-incident write-up.
 - [Customer breach notification](customer_breach_notification.md) — external comms (legal-approved).
 
+## Governance / agreements
+- [Memorandum of Understanding (MoU)](memorandum_of_understanding.md) — non-binding cooperation agreement between parties (info sharing, joint IR, system interconnection, etc.).
+
 ---
 
 ## On these templates
