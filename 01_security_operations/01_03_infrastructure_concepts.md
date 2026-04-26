@@ -56,6 +56,10 @@
 
 **Exam tip:** "who patches the OS in IaaS?" → the customer. "Who patches the OS in PaaS?" → the provider.
 
+---
+
+← Back: [01_02 System Hardening & Configuration Management](01_02_system_hardening_and_configs.md) — Next: [01_04 Network Architecture](01_04_network_architecture.md) →
+
 ## Related
 
 **Internal:**

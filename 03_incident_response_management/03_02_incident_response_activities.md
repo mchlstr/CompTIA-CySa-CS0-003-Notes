@@ -162,6 +162,10 @@ Detect → Analyze → Contain → Eradicate → Recover
 
 **Exam scenarios:** if a question describes an analyst rebuilding a system before scoping the breach → that's wrong (containment / eradication before scope = blown investigation). If it asks the *first* response action → usually containment, after detection / scoping. If it asks the *most important* documentation → chain of custody.
 
+---
+
+← Back: [03_01 Attack Methodology Frameworks](03_01_attack_methodology_frameworks.md) — Next: [03_03 Preparation & Post-Incident](03_03_preparation_and_post_incident.md) →
+
 ## Related
 
 **Internal:**

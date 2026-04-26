@@ -116,6 +116,10 @@ Wi-Fi remains one of the easiest attack surfaces in many environments — physic
 - If a scenario mentions Aircrack-ng or a `.cap` handshake file → think WPA/WPA2 PSK cracking.
 - If it mentions capturing data on open Wi-Fi → no crypto needed, just monitor mode.
 
+---
+
+← Back: [01_04 Network Architecture](01_04_network_architecture.md) — Next: [01_06 DNS Security](01_06_dns_security.md) →
+
 ## Related
 
 **Internal:**

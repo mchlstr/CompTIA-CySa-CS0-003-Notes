@@ -132,7 +132,7 @@ Indicators here: SPF fail, DKIM none, DMARC fail with `p=reject` (the receiver s
 - **Hybrid Analysis / ANY.RUN** — for attachments.
 - **Microsoft 365 / Google Workspace admin consoles** — search and pull copies of suspicious mail org-wide.
 
-## Other phishing indicators (recap from 01_08)
+## Other phishing indicators (recap from 01_10)
 
 - Lookalike domains (homograph attacks, IDN punycode).
 - URL shorteners hiding the destination.
@@ -150,6 +150,10 @@ Indicators here: SPF fail, DKIM none, DMARC fail with `p=reject` (the receiver s
 - DMARC `p=none` is **monitoring only** — it does not block anything.
 - Read `Received` headers **bottom up** to trace the path.
 - The `Authentication-Results` header is the receiver's verdict — read it first when analyzing a phishing report.
+
+---
+
+← Back: [01_10 Malicious Activity Detection](01_10_malicious_activity_detection.md) — Next: [01_12 File & Malware Analysis](01_12_file_and_malware_analysis.md) →
 
 ## Related
 

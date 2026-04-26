@@ -254,6 +254,10 @@ You don't need to write these for CySA+ but should recognize what they are.
 - Know **PowerShell event ID 4104** = script block logging (decoded malicious scripts show up here).
 - Understand that scripting is used for **both attack and defense** — same `IEX` syntax in a benign sysadmin script and an attacker dropper.
 
+---
+
+← Back: [01_14 Threat Hunting](01_14_threat_hunting.md) — Next: [01_16 Process & Automation](01_16_process_and_automation.md) →
+
 ## Related
 
 **Internal:**

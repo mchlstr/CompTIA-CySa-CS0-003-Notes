@@ -81,6 +81,10 @@ Severity drives who's involved, how fast, and what disclosures may be required.
 
 **Exam framing:** know the phase names (NIST + SANS), what happens in each, and the order. Many CySA+ questions hand you a scenario mid-incident and ask "what phase are you in?" or "what should you do next?"
 
+---
+
+← Back: [02_08 Memory & Data Integrity Vulnerabilities](../02_vulnerability_management/02_08_memory_and_data_integrity_vulnerabilities.md) — Next: [03_01 Attack Methodology Frameworks](03_01_attack_methodology_frameworks.md) →
+
 ## Related
 
 **Internal:**

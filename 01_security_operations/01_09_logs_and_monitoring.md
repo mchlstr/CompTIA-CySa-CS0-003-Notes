@@ -276,6 +276,10 @@ A flow record typically contains: source/dest IP, source/dest port, protocol, pa
 **Strengths:** catches "low-and-slow" and credential-misuse attacks that signature/correlation rules miss.
 **Limitations:** noisy until tuned; baseline-poisoning if the attacker is in long enough to look "normal."
 
+---
+
+← Back: [01_08 Encryption & Data Protection](01_08_encryption_and_data_protection.md) — Next: [01_10 Malicious Activity Detection](01_10_malicious_activity_detection.md) →
+
 ## Related
 
 **Internal:**

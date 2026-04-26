@@ -190,6 +190,10 @@ Numbers that quantify IR program health:
 
 **Exam tip:** know the **time clocks** — GDPR 72h, HIPAA 60 days, SEC 4 business days. If a scenario mentions a regulatory regime + breach, the clock matters and is often the answer.
 
+---
+
+← Back: [04_01 Vulnerability Reporting](04_01_vulnerability_reporting.md)
+
 ## Related
 
 **Internal:**

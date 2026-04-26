@@ -186,6 +186,10 @@ Same encryption goal, on QUIC/UDP. Even harder to inspect than DoH.
 - **Sinkholing** = redirect bad domains to a controlled IP — both blocks and provides visibility.
 - **AXFR exposure** = misconfigured zone transfer; restrict to authorized secondaries.
 
+---
+
+← Back: [01_05 Wireless Security](01_05_wireless_security.md) — Next: [01_07 Identity and Access Management (IAM)](01_07_identity_and_access_management.md) →
+
 ## Related
 
 **Internal:**

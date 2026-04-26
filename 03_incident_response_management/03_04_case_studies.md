@@ -163,6 +163,10 @@ SIEM alert: same user account logged in from New York at 14:00 and from Singapor
 
 **Exam tip:** scenario questions often ask "what should the analyst do *next*" — pick the option that follows IR best practice (scope before contain, contain before eradicate, document throughout, escalate when criteria met). Avoid the "act fast" answer that skips a phase.
 
+---
+
+← Back: [03_03 Preparation & Post-Incident](03_03_preparation_and_post_incident.md) — Next: [03_05 Forensic Artifacts](03_05_forensic_artifacts.md) →
+
 ## Related
 
 **Internal:**

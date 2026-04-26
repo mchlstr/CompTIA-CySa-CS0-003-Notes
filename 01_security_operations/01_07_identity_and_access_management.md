@@ -129,6 +129,10 @@ Common AD authentication attacks. CySA+ frequently shows you Mimikatz output or 
 
 **Exam tip:** Mimikatz / LSASS dumping → PtH, Golden Ticket, or DCSync. Service-account ticket cracking → Kerberoasting. "Forged tickets valid for years" → Golden Ticket. Standard defences: **tier-0 separation, krbtgt rotation, Credential Guard / LSA Protection, monitor Event 4769 patterns.**
 
+---
+
+← Back: [01_06 DNS Security](01_06_dns_security.md) — Next: [01_08 Encryption & Data Protection](01_08_encryption_and_data_protection.md) →
+
 ## Related
 
 **Internal:**

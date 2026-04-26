@@ -91,6 +91,10 @@ Difference vs. monitoring:
 
 **Exam tip:** know the difference — IOC = evidence, IOA (Indicator of Attack) = behavior in progress. Hunting looks for both, but mature programs lean toward IOAs.
 
+---
+
+← Back: [01_13 Threat Intelligence](01_13_threat_intelligence.md) — Next: [01_15 Scripting Languages for Analysts](01_15_scripting_languages.md) →
+
 ## Related
 
 **Internal:**

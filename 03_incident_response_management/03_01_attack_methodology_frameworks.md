@@ -110,6 +110,10 @@ A comprehensive guide to **web application security testing**. Maps to OWASP Top
 
 **Exam tip:** the test loves "which framework would you use for X?" → know which is *for* sequence vs. catalog vs. analysis vs. testing.
 
+---
+
+← Back: [03_00 Intro: Incident Response Management](03_00_intro_incident_response.md) — Next: [03_02 Incident Response Activities](03_02_incident_response_activities.md) →
+
 ## Related
 
 **Internal:**

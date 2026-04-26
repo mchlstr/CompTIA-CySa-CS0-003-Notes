@@ -218,6 +218,10 @@ Every artifact handled must be tracked end-to-end. Document: what, where, when, 
 - **Anti-forensics indicators** are themselves evidence — gaps, missing logs, timestomp mismatches all tell a story.
 - **Sysmon and PowerShell logging** are not on by default — if a question mentions rich endpoint logging, check whether it would have been captured at all.
 
+---
+
+← Back: [03_04 Case Studies](03_04_case_studies.md) — Next: [04_01 Vulnerability Reporting](../04_reporting_and_communication/04_01_vulnerability_reporting.md) →
+
 ## Related
 
 **Internal:**

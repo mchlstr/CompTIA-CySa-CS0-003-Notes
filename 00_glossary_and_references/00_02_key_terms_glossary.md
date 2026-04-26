@@ -121,7 +121,7 @@
 | Measured Boot | A UEFI feature that gathers secure metrics to validate the boot process in an attestation report. |
 | Microservices | A software architecture where components of the solution are conceived as highly decoupled services that can be developed, tested, and deployed independently. |
 | Mimikatz | An open-source application that allows users to view and save authentication credentials to perform pass-the-hash attacks. |
-| MITRE ATT\&CK Framework | A knowledge base for listing and explaining specific adversary tactics, techniques, and common knowledge or procedures. |
+| MITRE ATT&CK Framework | A knowledge base for listing and explaining specific adversary tactics, techniques, and common knowledge or procedures. |
 | Mobile Device Management (MDM) | The process and supporting technologies for tracking, controlling, and securing an organization's mobile infrastructure. |
 | Multifactor Authentication (MFA) | An authentication scheme that requires the user to present at least two different factors as credentials. |
 | Nation-State | A group of attackers with exceptional capability, funding, and organization, with an intent to hack a network or system, often affiliated with a government. |

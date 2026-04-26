@@ -90,6 +90,10 @@ Three categories:
 - **Financial data** — non-PCI: bank account numbers, financial reports (SOX-relevant).
 - **Government/classified** — controlled by clearance levels (Confidential, Secret, Top Secret).
 
+---
+
+← Back: [01_07 Identity and Access Management (IAM)](01_07_identity_and_access_management.md) — Next: [01_09 Logs and Monitoring](01_09_logs_and_monitoring.md) →
+
 ## Related
 
 **Internal:**

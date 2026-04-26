@@ -52,6 +52,10 @@ Knowing the hardware layer matters for low-level threats and forensic acquisitio
 
 **Exam tip:** if a question mentions persistence surviving OS reinstall → think UEFI/firmware. If it mentions volatile evidence → memory acquisition first, in correct order of volatility.
 
+---
+
+← Back: [01_00 Intro: Security Operations](01_00_intro_security_operations.md) — Next: [01_02 System Hardening & Configuration Management](01_02_system_hardening_and_configs.md) →
+
 ## Related
 
 **Internal:**

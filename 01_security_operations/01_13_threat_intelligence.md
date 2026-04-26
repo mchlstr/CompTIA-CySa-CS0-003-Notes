@@ -65,6 +65,10 @@ Standard scoring (e.g., MISP) uses **Admiralty Code** (A1–F6): letter for sour
 
 **Exam tip:** if asked which intel type goes to whom — strategic = exec, operational = managers, tactical = analysts, technical = tools.
 
+---
+
+← Back: [01_12 File & Malware Analysis](01_12_file_and_malware_analysis.md) — Next: [01_14 Threat Hunting](01_14_threat_hunting.md) →
+
 ## Related
 
 **Internal:**

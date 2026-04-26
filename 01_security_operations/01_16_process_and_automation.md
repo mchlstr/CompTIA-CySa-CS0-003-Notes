@@ -97,6 +97,10 @@ Three pillars:
 
 **Exam angle:** if a question asks how to scale a SOC without hiring more analysts → SOAR + playbooks + tuning. If it asks why MTTR is high → unstandardized response, no playbooks, alert fatigue.
 
+---
+
+← Back: [01_15 Scripting Languages for Analysts](01_15_scripting_languages.md) — Next: [02_00 Intro: Vulnerability Management](../02_vulnerability_management/02_00_intro_vulnerability_management.md) →
+
 ## Related
 
 **Internal:**

@@ -46,6 +46,10 @@ Key concepts:
 
 Hardening sets the *target* state. Configuration management *enforces and monitors* that state over time. Without CM, hardening decays: someone disables a control "temporarily," patches lapse, and within months the system is no longer hardened.
 
+---
+
+← Back: [01_01 OS Basics](01_01_os_basics.md) — Next: [01_03 Infrastructure Concepts](01_03_infrastructure_concepts.md) →
+
 ## Related
 
 **Internal:**

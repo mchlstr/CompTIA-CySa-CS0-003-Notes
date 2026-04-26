@@ -67,7 +67,11 @@ CySA+ tests recognition of security controls by **what they do** (function) and 
 - **Technical / logical** — firewalls, encryption, IAM, EDR, MFA.
 - **Physical** — locks, badges, cameras, mantraps.
 
-**Exam tip:** a single control can be in **multiple functions** — a security camera is both **detective** *and* **deterrent**; a WAF is both **preventive** *and* **compensating*. When asked to classify, pick the function that best matches the *intent* the scenario describes.
+**Exam tip:** a single control can be in **multiple functions** — a security camera is both **detective** *and* **deterrent**; a WAF is both **preventive** *and* **compensating**. When asked to classify, pick the function that best matches the *intent* the scenario describes.
+
+---
+
+Next: [01_01 OS Basics](01_01_os_basics.md) →
 
 ## Related
 

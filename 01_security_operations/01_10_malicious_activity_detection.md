@@ -100,6 +100,10 @@ The CySA+ exam expects you to recognize *indicators* — observable signs that s
 
 **Exam tip:** know the indicator-to-source mapping. Bandwidth spike = network. Cryptominer CPU = host. Account enum = application. Lookalike domain = social.
 
+---
+
+← Back: [01_09 Logs and Monitoring](01_09_logs_and_monitoring.md) — Next: [01_11 Email Analysis](01_11_email_analysis.md) →
+
 ## Related
 
 **Internal:**

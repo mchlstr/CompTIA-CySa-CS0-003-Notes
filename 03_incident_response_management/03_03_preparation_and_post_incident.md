@@ -210,6 +210,10 @@ RCA findings should drive concrete changes:
 
 **Exam tip:** RCA goal = address the *systemic* cause, not just the immediate trigger. "User opened phishing email" is a symptom, not a root cause.
 
+---
+
+← Back: [03_02 Incident Response Activities](03_02_incident_response_activities.md) — Next: [03_04 Case Studies](03_04_case_studies.md) →
+
 ## Related
 
 **Internal:**
