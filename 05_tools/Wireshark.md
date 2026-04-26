@@ -19,3 +19,9 @@ Capture, visualize, and analyze network traffic for troubleshooting and security
 ## Tips
 - Use capture filters to reduce noise  
 - Combine with tcpdump for scripted captures
+
+## References
+- Official site: https://www.wireshark.org/
+- Documentation: https://www.wireshark.org/docs/
+- Display filter reference: https://www.wireshark.org/docs/dfref/
+- Sample captures: https://wiki.wireshark.org/SampleCaptures

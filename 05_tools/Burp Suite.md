@@ -19,3 +19,8 @@ Analyze and intercept HTTP/S traffic, scan for vulnerabilities, and exploit web 
 ## Tips
 - Free edition has limited scanning capabilities  
 - Use with proper authorization only
+
+## References
+- Official site: https://portswigger.net/burp
+- Documentation: https://portswigger.net/burp/documentation
+- Web Security Academy (free training): https://portswigger.net/web-security

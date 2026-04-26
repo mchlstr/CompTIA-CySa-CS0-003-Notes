@@ -20,3 +20,7 @@ Identify potentially malicious IP addresses to inform blocking, investigation, a
 
 - Combine with other threat sources to avoid false positives.
 - Rate-limit automated lookups to respect API terms.
+
+## References
+- Official site: https://www.abuseipdb.com/
+- API docs: https://docs.abuseipdb.com/

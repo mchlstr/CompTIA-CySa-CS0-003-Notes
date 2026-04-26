@@ -19,3 +19,8 @@ Test connectivity, transfer files, and set up simple network services.
 ## Tips
 - Avoid using on unauthorized networks  
 - Often used in conjunction with other penetration testing tools
+
+## References
+- Original (legacy) Netcat: http://nc110.sourceforge.net/
+- Ncat (modern, from Nmap project): https://nmap.org/ncat/
+- GNU netcat: https://netcat.sourceforge.net/

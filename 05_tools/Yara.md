@@ -19,3 +19,9 @@ Detect and categorize malware based on byte patterns and strings.
 ## Tips
 - Maintain a clean and tested rule set  
 - Combine with other detection tools for accuracy
+
+## References
+- Official site: https://virustotal.github.io/yara/
+- Documentation: https://yara.readthedocs.io/
+- GitHub: https://github.com/VirusTotal/yara
+- Awesome YARA (curated rules + tools): https://github.com/InQuest/awesome-yara

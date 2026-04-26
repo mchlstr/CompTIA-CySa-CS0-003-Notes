@@ -19,3 +19,7 @@ Detect common web vulnerabilities and provide actionable findings for remediatio
 ## Tips
 - Tune scan profiles to reduce false positives.  
 - Always test against staging or authorised targets only.
+
+## References
+- Official site: https://www.arachni-scanner.com/ (project archived)
+- GitHub: https://github.com/Arachni/arachni

@@ -19,3 +19,7 @@ Test the security of WPS-enabled wireless networks.
 ## Tips
 - Only test networks you control or have explicit authorization for  
 - Modern routers may limit attack effectiveness
+
+## References
+- Maintained fork (reaver-wps-fork-t6x): https://github.com/t6x/reaver-wps-fork-t6x
+- Original (archived): https://code.google.com/archive/p/reaver-wps/

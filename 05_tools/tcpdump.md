@@ -19,3 +19,8 @@ Capture and inspect packets to troubleshoot networks and analyze threats.
 ## Tips
 - Use capture filters to reduce data volume  
 - Combine with Wireshark for GUI-based analysis
+
+## References
+- Official site: https://www.tcpdump.org/
+- Manual page: https://www.tcpdump.org/manpages/tcpdump.1.html
+- Filter expression docs: https://www.tcpdump.org/manpages/pcap-filter.7.html

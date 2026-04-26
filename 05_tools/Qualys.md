@@ -19,3 +19,7 @@ Continuously monitor IT assets for vulnerabilities and compliance.
 ## Tips
 - Requires subscription and asset licensing  
 - Combine with other scanners for coverage completeness
+
+## References
+- Official site: https://www.qualys.com/
+- Documentation portal: https://docs.qualys.com/

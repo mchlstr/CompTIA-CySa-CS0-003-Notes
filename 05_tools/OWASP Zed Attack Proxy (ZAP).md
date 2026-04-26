@@ -19,3 +19,8 @@ Intercept and test HTTP/S traffic to identify vulnerabilities.
 ## Tips
 - Use with local or staging apps  
 - Regularly update to latest rules and scripts
+
+## References
+- Official site: https://www.zaproxy.org/
+- Documentation: https://www.zaproxy.org/docs/
+- GitHub: https://github.com/zaproxy/zaproxy

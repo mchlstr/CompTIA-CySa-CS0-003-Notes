@@ -19,3 +19,7 @@ Quickly enumerate active hosts and open ports on local networks for reconnaissan
 ## Tips
 - Not a full vulnerability scanner — combine with Nmap/OpenVAS for depth.  
 - Useful for quick adhoc discovery but avoid aggressive scanning on production.
+
+## References
+- Official site: https://angryip.org/
+- GitHub: https://github.com/angryip/ipscan

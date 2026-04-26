@@ -22,3 +22,8 @@ Provide deep network visibility and security monitoring by analyzing network flo
 - Use with centralized log storage for long-term analysis  
 - Leverage custom scripts to extend detection capabilities  
 - Combine with packet capture tools (e.g., Wireshark, tcpdump) for deeper inspection
+
+## References
+- Official site: https://zeek.org/
+- Documentation: https://docs.zeek.org/
+- GitHub: https://github.com/zeek/zeek

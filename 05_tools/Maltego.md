@@ -19,3 +19,7 @@ Visualize relationships between people, domains, IPs, and organizations.
 ## Tips
 - Requires API keys for some data sources  
 - Export findings for reporting and presentations
+
+## References
+- Official site: https://www.maltego.com/
+- Documentation: https://docs.maltego.com/

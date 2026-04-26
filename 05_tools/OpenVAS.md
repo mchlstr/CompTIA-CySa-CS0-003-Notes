@@ -19,3 +19,8 @@ Scan networks and hosts for known security weaknesses and compliance gaps.
 ## Tips
 - Requires setup and tuning for large networks  
 - Combine with Nmap for asset discovery
+
+## References
+- OpenVAS: https://www.openvas.org/
+- Greenbone Community Edition: https://greenbone.github.io/docs/latest/
+- Greenbone (commercial): https://www.greenbone.net/

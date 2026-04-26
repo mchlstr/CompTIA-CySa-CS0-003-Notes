@@ -19,3 +19,7 @@ Test firewall rules, simulate DoS attacks, and perform network reconnaissance.
 ## Tips
 - Ensure you have permission before testing networks  
 - Combine with packet capture tools for monitoring
+
+## References
+- Official site: http://www.hping.org/
+- hping3 GitHub: https://github.com/antirez/hping

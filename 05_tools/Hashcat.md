@@ -19,3 +19,8 @@ Test password strength and recover lost passwords using brute force, dictionary,
 ## Tips
 - Use only in legal testing environments  
 - Combine with wordlists and rules for realistic simulations
+
+## References
+- Official site: https://hashcat.net/hashcat/
+- Wiki: https://hashcat.net/wiki/
+- GitHub: https://github.com/hashcat/hashcat

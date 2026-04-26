@@ -19,3 +19,8 @@ Identify exposed services, misconfigurations, and vulnerabilities across the Int
 ## Tips
 - Do not scan or exploit discovered devices without permission  
 - Use Shodan data for situational awareness
+
+## References
+- Official site: https://www.shodan.io/
+- Documentation: https://help.shodan.io/
+- Search filters reference: https://www.shodan.io/search/filters

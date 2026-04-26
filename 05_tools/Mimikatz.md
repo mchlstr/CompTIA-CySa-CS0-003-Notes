@@ -19,3 +19,8 @@ Retrieve plaintext passwords, hashes, and Kerberos tickets from memory.
 ## Tips
 - Extremely powerful, use only in lab or authorized environments  
 - Often flagged by antivirus and EDR
+
+## References
+- GitHub: https://github.com/gentilkiwi/mimikatz
+- Author's blog: https://blog.gentilkiwi.com/
+- ATT&CK reference: https://attack.mitre.org/software/S0002/

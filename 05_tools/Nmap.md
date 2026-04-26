@@ -19,3 +19,8 @@ Enumerate hosts, ports, and services; detect OS and vulnerabilities.
 ## Tips
 - Combine with NSE scripts for deeper testing  
 - Use responsibly to avoid alerting administrators
+
+## References
+- Official site: https://nmap.org/
+- Reference guide: https://nmap.org/book/man.html
+- NSE script database: https://nmap.org/nsedoc/

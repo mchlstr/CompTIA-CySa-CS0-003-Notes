@@ -44,3 +44,9 @@ Ensure the authenticity and integrity of executable files and DLLs, and detect p
 ## Tips
 - Run with administrative privileges for full access  
 - Combine with Sysinternals tools for comprehensive endpoint investigation
+
+## References
+- Sysinternals suite overview: https://learn.microsoft.com/en-us/sysinternals/
+- Download utilities: https://learn.microsoft.com/en-us/sysinternals/downloads/
+- Sigcheck specifically: https://learn.microsoft.com/en-us/sysinternals/downloads/sigcheck
+- Run live (no install): https://live.sysinternals.com/

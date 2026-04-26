@@ -19,3 +19,7 @@ Quickly determine if files or links are malicious or suspicious.
 ## Tips
 - Avoid uploading sensitive data without authorization  
 - Use API for automated integration
+
+## References
+- Official site: https://www.virustotal.com/
+- API docs: https://docs.virustotal.com/

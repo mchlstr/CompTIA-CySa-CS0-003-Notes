@@ -19,3 +19,7 @@ Execute processes on remote systems and manage networked Windows hosts.
 ## Tips
 - Requires administrative access  
 - Often flagged by EDR for suspicious activity
+
+## References
+- Microsoft Sysinternals page: https://learn.microsoft.com/en-us/sysinternals/downloads/psexec
+- Sysinternals overview: https://learn.microsoft.com/en-us/sysinternals/

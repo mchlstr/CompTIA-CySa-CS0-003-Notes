@@ -19,3 +19,8 @@ Collect, correlate, and analyze logs from IT and security infrastructure.
 ## Tips
 - Use indexed fields and dashboards for efficiency  
 - Integrate with alerts for proactive monitoring
+
+## References
+- Official site: https://www.splunk.com/
+- Documentation: https://docs.splunk.com/
+- Splunk Security Essentials (free app): https://splunkbase.splunk.com/app/3435

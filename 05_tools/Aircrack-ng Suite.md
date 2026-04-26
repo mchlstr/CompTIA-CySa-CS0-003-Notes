@@ -19,3 +19,7 @@ Test wireless network security, discover weak encryption, and validate Wi‑Fi c
 ## Tips
 - Always test only on networks you own or have explicit permission to assess.  
 - Use with good capture hardware and antennas for reliable results.
+
+## References
+- Official site: https://www.aircrack-ng.org/
+- Documentation: https://www.aircrack-ng.org/documentation.html
