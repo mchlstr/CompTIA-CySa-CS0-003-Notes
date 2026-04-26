@@ -89,3 +89,16 @@ Three categories:
 - **IP (Intellectual Property)** — source code, trade secrets, designs.
 - **Financial data** — non-PCI: bank account numbers, financial reports (SOX-relevant).
 - **Government/classified** — controlled by clearance levels (Confidential, Secret, Top Secret).
+
+## Related
+
+**Internal:**
+- [01_07 Identity and access management](01_07_identity_and_access_management.md) — PKI underpins SSO/federation
+- [01_11 Email analysis](01_11_email_analysis.md) — DKIM uses public-key crypto over DNS
+- [04_01 Vulnerability reporting](../04_reporting_and_communication/04_01_vulnerability_reporting.md) — PCI / HIPAA / SOX compliance reporting
+
+**External:**
+- [NIST SP 800-57 — Key Management Recommendations](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final)
+- [PCI DSS Standards](https://www.pcisecuritystandards.org/)
+- [HHS HIPAA Security Rule](https://www.hhs.gov/hipaa/for-professionals/security/index.html)
+- [CA/Browser Forum (TLS cert standards)](https://cabforum.org/)

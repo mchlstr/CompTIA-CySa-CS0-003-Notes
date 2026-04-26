@@ -64,3 +64,18 @@ Standard scoring (e.g., MISP) uses **Admiralty Code** (A1–F6): letter for sour
 - **Technical** — IOCs (hashes, IPs, domains) fed into SIEM, EDR, firewall blocklists.
 
 **Exam tip:** if asked which intel type goes to whom — strategic = exec, operational = managers, tactical = analysts, technical = tools.
+
+## Related
+
+**Internal:**
+- [01_10 Malicious activity detection](01_10_malicious_activity_detection.md) — applying intel to detection
+- [01_12 File and malware analysis](01_12_file_and_malware_analysis.md) — IOC enrichment
+- [01_14 Threat hunting](01_14_threat_hunting.md) — proactive use of intel
+- [03_01 Attack methodology frameworks](../03_incident_response_management/03_01_attack_methodology_frameworks.md) — Kill Chain, ATT&CK, Diamond
+
+**External:**
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [CISA Known Exploited Vulnerabilities (KEV)](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
+- [CISA Automated Indicator Sharing (AIS)](https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/automated-indicator-sharing-ais)
+- [MISP — open threat intel platform](https://www.misp-project.org/)
+- [STIX / TAXII](https://oasis-open.github.io/cti-documentation/)

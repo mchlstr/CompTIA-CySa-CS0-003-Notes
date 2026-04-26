@@ -36,5 +36,6 @@ Assessment tool output: analyzing network scanning, web application scanners, vu
 | [03_incident_response_management](./03_incident_response_management) | Incident response frameworks, processes, and hands-on case studies. |
 | [04_reporting_and_communication](./04_reporting_and_communication) | Reporting techniques for vulnerabilities and incidents. |
 | [05_tools](./05_tools) | Overview of cybersecurity tools with practical usage notes. |
+| [06_templates](./06_templates) | Fill-in templates for vulnerability and incident reporting (synthesised from NIST, PCI DSS, GDPR, and other recognised standards — see each template's References section). |
 
 ---

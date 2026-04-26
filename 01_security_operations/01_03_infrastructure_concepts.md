@@ -55,3 +55,15 @@
 - **SaaS** (you use Office 365, Salesforce) — provider secures almost everything; *you* secure data, user access, configuration.
 
 **Exam tip:** "who patches the OS in IaaS?" → the customer. "Who patches the OS in PaaS?" → the provider.
+
+## Related
+
+**Internal:**
+- [01_04 Network architecture](01_04_network_architecture.md) — cloud networking concepts
+- [02_07 Cloud-specific vulnerabilities](../02_vulnerability_management/02_07_cloud_specific_vulnerabilities.md) — IAM, S3, K8s, IMDS abuse
+- [02_05 Attack surface and threat modeling](../02_vulnerability_management/02_05_attack_surface_and_threat_modeling.md) — including cloud surface
+
+**External:**
+- [NIST SP 800-145 — Cloud Computing Definition](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)
+- [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
+- [CNCF Cloud Native Landscape](https://landscape.cncf.io/)

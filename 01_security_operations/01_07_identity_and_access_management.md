@@ -88,3 +88,16 @@ Four pillars (Gartner):
 CASBs are often part of a **SASE/SSE** stack now (Netskope, Zscaler, Microsoft Defender for Cloud Apps).
 
 **Exam tip:** if a question is about controlling SaaS use or detecting shadow IT → CASB.
+
+## Related
+
+**Internal:**
+- [01_08 Encryption and data protection](01_08_encryption_and_data_protection.md) — PKI, certificates underpin federation
+- [02_06 Web vulnerability classes](../02_vulnerability_management/02_06_web_vulnerability_classes.md) — auth and session attacks
+- [02_07 Cloud-specific vulnerabilities](../02_vulnerability_management/02_07_cloud_specific_vulnerabilities.md) — IAM in cloud, OAuth abuse
+
+**External:**
+- [NIST SP 800-63 — Digital Identity Guidelines](https://pages.nist.gov/800-63-3/)
+- [FIDO Alliance — passkeys](https://fidoalliance.org/passkeys/)
+- [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
+- [Microsoft — Conditional Access](https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview)

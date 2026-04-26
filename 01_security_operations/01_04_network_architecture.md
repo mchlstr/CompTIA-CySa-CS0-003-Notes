@@ -73,3 +73,16 @@ The pitch: instead of backhauling all branch traffic to HQ for inspection, route
 - **Easier microsegmentation, faster incident response** (block a host network-wide instantly).
 
 **Exam tip:** SDN ≠ SD-WAN. SDN is the underlying tech; SD-WAN is one application of SDN principles to wide-area networks.
+
+## Related
+
+**Internal:**
+- [01_05 Wireless security](01_05_wireless_security.md) — wireless network architecture
+- [01_06 DNS security](01_06_dns_security.md) — the protocol every network depends on
+- [01_03 Infrastructure concepts](01_03_infrastructure_concepts.md) — cloud and hybrid context
+- [02_07 Cloud-specific vulnerabilities](../02_vulnerability_management/02_07_cloud_specific_vulnerabilities.md) — VPC, security groups, IMDS
+
+**External:**
+- [NIST SP 800-207 — Zero Trust Architecture](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf)
+- [CISA Zero Trust Maturity Model](https://www.cisa.gov/zero-trust-maturity-model)
+- [Gartner SASE definition](https://www.gartner.com/en/information-technology/glossary/secure-access-service-edge-sase)

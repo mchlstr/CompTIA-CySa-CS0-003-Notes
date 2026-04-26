@@ -109,3 +109,19 @@ A comprehensive guide to **web application security testing**. Maps to OWASP Top
 | OWASP Testing Guide | Web app testing methodology | Web app pen test |
 
 **Exam tip:** the test loves "which framework would you use for X?" → know which is *for* sequence vs. catalog vs. analysis vs. testing.
+
+## Related
+
+**Internal:**
+- [01_13 Threat intelligence](../01_security_operations/01_13_threat_intelligence.md) — TTPs, actors
+- [01_14 Threat hunting](../01_security_operations/01_14_threat_hunting.md) — ATT&CK-driven hunting
+- [02_05 Attack surface and threat modeling](../02_vulnerability_management/02_05_attack_surface_and_threat_modeling.md) — STRIDE/DREAD/PASTA
+- [03_02 Incident response activities](03_02_incident_response_activities.md) — applying frameworks during IR
+
+**External:**
+- [Lockheed Martin — Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [MITRE D3FEND](https://d3fend.mitre.org/)
+- [Diamond Model paper (Caltagirone, Pendergast, Betz)](https://www.activeresponse.org/wp-content/uploads/2013/07/diamond.pdf)
+- [OSSTMM (ISECOM)](https://www.isecom.org/OSSTMM.3.pdf)
+- [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)

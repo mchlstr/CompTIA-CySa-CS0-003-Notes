@@ -161,3 +161,18 @@ Detect → Analyze → Contain → Eradicate → Recover
 ```
 
 **Exam scenarios:** if a question describes an analyst rebuilding a system before scoping the breach → that's wrong (containment / eradication before scope = blown investigation). If it asks the *first* response action → usually containment, after detection / scoping. If it asks the *most important* documentation → chain of custody.
+
+## Related
+
+**Internal:**
+- [03_01 Attack methodology frameworks](03_01_attack_methodology_frameworks.md) — frameworks applied here
+- [03_03 Preparation and post-incident](03_03_preparation_and_post_incident.md) — what comes before/after
+- [03_04 Case studies](03_04_case_studies.md) — scenarios applying these activities
+- [03_05 Forensic artifacts](03_05_forensic_artifacts.md) — evidence sources
+- [04_02 Incident reporting](../04_reporting_and_communication/04_02_incident_reporting.md) — comms during IR
+
+**External:**
+- [NIST SP 800-86 — Forensic Techniques into Incident Response](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf)
+- [RFC 3227 — Evidence Collection and Archiving](https://datatracker.ietf.org/doc/html/rfc3227)
+- [Volatility Foundation](https://www.volatilityfoundation.org/)
+- [SANS DFIR Cheat Sheets](https://www.sans.org/posters/?focus-area=digital-forensics)

@@ -90,3 +90,18 @@ Difference vs. monitoring:
 - **Pyramid of Pain** — prioritize hunting for high-pain indicators (TTPs over IPs).
 
 **Exam tip:** know the difference — IOC = evidence, IOA (Indicator of Attack) = behavior in progress. Hunting looks for both, but mature programs lean toward IOAs.
+
+## Related
+
+**Internal:**
+- [01_13 Threat intelligence](01_13_threat_intelligence.md) — feeds the hypotheses
+- [01_15 Scripting languages](01_15_scripting_languages.md) — for ad-hoc queries
+- [03_01 Attack methodology frameworks](../03_incident_response_management/03_01_attack_methodology_frameworks.md) — ATT&CK-driven hunting
+- [03_05 Forensic artifacts](../03_incident_response_management/03_05_forensic_artifacts.md) — what to look for on hosts
+
+**External:**
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [MITRE D3FEND — defensive countermeasures](https://d3fend.mitre.org/)
+- [Atomic Red Team](https://atomicredteam.io/)
+- [SANS — Hunt Evil poster](https://www.sans.org/posters/hunt-evil/)
+- [Thinkst Canary — deception platform](https://canary.tools/)

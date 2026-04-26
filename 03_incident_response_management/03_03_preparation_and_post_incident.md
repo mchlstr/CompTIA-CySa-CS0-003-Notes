@@ -209,3 +209,17 @@ RCA findings should drive concrete changes:
 - Policy changes.
 
 **Exam tip:** RCA goal = address the *systemic* cause, not just the immediate trigger. "User opened phishing email" is a symptom, not a root cause.
+
+## Related
+
+**Internal:**
+- [01_16 Process and automation](../01_security_operations/01_16_process_and_automation.md) — playbook authoring
+- [03_02 Incident response activities](03_02_incident_response_activities.md) — operational phases
+- [03_04 Case studies](03_04_case_studies.md) — practice scenarios
+- [04_02 Incident reporting](../04_reporting_and_communication/04_02_incident_reporting.md) — after-action reports
+
+**External:**
+- [NIST SP 800-34 — Contingency Planning Guide](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf)
+- [ISO 22301 — Business Continuity](https://www.iso.org/standard/75106.html)
+- [SANS — Incident Handler's Handbook](https://www.sans.org/white-papers/33901/)
+- [Google SRE — Postmortem culture (blameless RCA)](https://sre.google/sre-book/postmortem-culture/)

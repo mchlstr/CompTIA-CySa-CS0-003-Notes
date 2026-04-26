@@ -162,3 +162,17 @@ SIEM alert: same user account logged in from New York at 14:00 and from Singapor
 - **Communicating clearly under pressure** — to execs, users, regulators.
 
 **Exam tip:** scenario questions often ask "what should the analyst do *next*" — pick the option that follows IR best practice (scope before contain, contain before eradicate, document throughout, escalate when criteria met). Avoid the "act fast" answer that skips a phase.
+
+## Related
+
+**Internal:**
+- [03_01 Attack methodology frameworks](03_01_attack_methodology_frameworks.md) — referenced throughout
+- [03_02 Incident response activities](03_02_incident_response_activities.md) — phases in action
+- [03_05 Forensic artifacts](03_05_forensic_artifacts.md) — evidence collected during cases
+- [01_10 Malicious activity detection](../01_security_operations/01_10_malicious_activity_detection.md) — initial signals
+
+**External:**
+- [MITRE ATT&CK technique pages](https://attack.mitre.org/techniques/enterprise/)
+- [Mandiant M-Trends annual reports](https://www.mandiant.com/m-trends)
+- [CrowdStrike Global Threat Report](https://www.crowdstrike.com/global-threat-report/)
+- [DFIR Report (real intrusion walkthroughs)](https://thedfirreport.com/)

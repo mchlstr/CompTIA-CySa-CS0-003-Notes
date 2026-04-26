@@ -80,3 +80,18 @@ Severity drives who's involved, how fast, and what disclosures may be required.
 - **No retrospective** — same incident happens again in 6 months.
 
 **Exam framing:** know the phase names (NIST + SANS), what happens in each, and the order. Many CySA+ questions hand you a scenario mid-incident and ask "what phase are you in?" or "what should you do next?"
+
+## Related
+
+**Internal:**
+- [03_01 Attack methodology frameworks](03_01_attack_methodology_frameworks.md)
+- [03_02 Incident response activities](03_02_incident_response_activities.md)
+- [03_03 Preparation and post-incident](03_03_preparation_and_post_incident.md)
+- [03_04 Case studies](03_04_case_studies.md)
+- [03_05 Forensic artifacts](03_05_forensic_artifacts.md)
+- [04_02 Incident reporting](../04_reporting_and_communication/04_02_incident_reporting.md)
+
+**External:**
+- [NIST SP 800-61r2 — Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
+- [SANS Incident Handler's Handbook](https://www.sans.org/white-papers/33901/)
+- [FIRST — Computer Security Incident Response Teams](https://www.first.org/)

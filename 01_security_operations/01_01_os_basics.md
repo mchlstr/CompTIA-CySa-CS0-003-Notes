@@ -51,3 +51,15 @@ Knowing the hardware layer matters for low-level threats and forensic acquisitio
 - **HSM (Hardware Security Module)** — dedicated crypto hardware for enterprise key management.
 
 **Exam tip:** if a question mentions persistence surviving OS reinstall → think UEFI/firmware. If it mentions volatile evidence → memory acquisition first, in correct order of volatility.
+
+## Related
+
+**Internal:**
+- [01_02 System hardening](01_02_system_hardening_and_configs.md) — how to harden these OSes
+- [01_09 Logs and monitoring](01_09_logs_and_monitoring.md) — Windows Event IDs, log locations
+- [03_05 Forensic artifacts](../03_incident_response_management/03_05_forensic_artifacts.md) — deep-dive on Windows/Linux artifacts
+
+**External:**
+- [Microsoft Sysinternals](https://learn.microsoft.com/en-us/sysinternals/) — Process Explorer, Autoruns, Procmon
+- [Windows Registry reference (Microsoft)](https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry)
+- [Linux Filesystem Hierarchy Standard](https://refspecs.linuxfoundation.org/fhs.shtml)

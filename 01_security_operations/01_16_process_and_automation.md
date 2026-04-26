@@ -96,3 +96,16 @@ Three pillars:
 - Ransomware detection.
 
 **Exam angle:** if a question asks how to scale a SOC without hiring more analysts → SOAR + playbooks + tuning. If it asks why MTTR is high → unstandardized response, no playbooks, alert fatigue.
+
+## Related
+
+**Internal:**
+- [01_09 Logs and monitoring](01_09_logs_and_monitoring.md) — the SIEM/EDR data SOAR orchestrates
+- [01_15 Scripting languages](01_15_scripting_languages.md) — the building blocks under SOAR
+- [03_03 Preparation and post-incident](../03_incident_response_management/03_03_preparation_and_post_incident.md) — playbooks live here too
+
+**External:**
+- [NIST SP 800-61 — Computer Security Incident Handling Guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
+- [Gartner — SOAR market guide](https://www.gartner.com/en/information-technology/glossary/security-orchestration-automation-response-soar)
+- [Splunk SOAR (formerly Phantom)](https://www.splunk.com/en_us/products/splunk-security-orchestration-and-automation.html)
+- [Tines — workflow automation](https://www.tines.com/)

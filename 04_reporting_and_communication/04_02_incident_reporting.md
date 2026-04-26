@@ -188,15 +188,26 @@ Numbers that quantify IR program health:
 - High: detect within 4 hours, contain within 24.
 - All Sev 1/2: post-incident review within 2 weeks; action items 90% closed within 90 days.
 
-## Templates
-
-Useful templates to keep ready:
-- **Incident report (full)** — the structure above.
-- **Executive briefing** — 1-page, plain language.
-- **Customer notification** — breach disclosure email/letter (legal-approved).
-- **Regulatory notification** — per regulator template (often have specific forms).
-- **Status update template** — standard format for ongoing comms.
-- **After-action report template** — lessons learned format.
-- **Press statement template** — short, factual, pre-approved messaging.
-
 **Exam tip:** know the **time clocks** — GDPR 72h, HIPAA 60 days, SEC 4 business days. If a scenario mentions a regulatory regime + breach, the clock matters and is often the answer.
+
+## Related
+
+**Internal:**
+- [03_02 Incident response activities](../03_incident_response_management/03_02_incident_response_activities.md) — what's being reported on
+- [03_03 Preparation and post-incident](../03_incident_response_management/03_03_preparation_and_post_incident.md) — playbooks, BC/DR
+- [03_05 Forensic artifacts](../03_incident_response_management/03_05_forensic_artifacts.md) — evidence in reports
+- [04_01 Vulnerability reporting](04_01_vulnerability_reporting.md) — sibling reporting domain
+
+**Templates:**
+- [Incident status update](../06_templates/incident_status_update.md)
+- [Incident final report / after-action](../06_templates/incident_final_report.md)
+- [Customer breach notification](../06_templates/customer_breach_notification.md)
+
+**External:**
+- [GDPR Art. 33 — Notification of personal data breach](https://gdpr-info.eu/art-33-gdpr/)
+- [HHS HIPAA Breach Notification Rule](https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html)
+- [SEC cybersecurity disclosure rule (2023)](https://www.sec.gov/news/press-release/2023-139)
+- [NIS2 Directive (EU)](https://www.nis-2-directive.com/)
+- [CISA — Reporting](https://www.cisa.gov/report)
+- [FBI IC3](https://www.ic3.gov/)
+- [State data breach notification laws (NCSL)](https://www.ncsl.org/technology-and-communication/security-breach-notification-laws)

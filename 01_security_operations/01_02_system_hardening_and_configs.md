@@ -45,3 +45,16 @@ Key concepts:
 ## How they connect
 
 Hardening sets the *target* state. Configuration management *enforces and monitors* that state over time. Without CM, hardening decays: someone disables a control "temporarily," patches lapse, and within months the system is no longer hardened.
+
+## Related
+
+**Internal:**
+- [01_01 OS basics](01_01_os_basics.md) — what you're hardening
+- [02_04 Mitigation and controls](../02_vulnerability_management/02_04_mitigation_and_controls.md) — patching, compensating controls
+- [02_07 Cloud-specific vulnerabilities](../02_vulnerability_management/02_07_cloud_specific_vulnerabilities.md) — cloud configuration baselines
+
+**External:**
+- [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks)
+- [DISA STIGs](https://public.cyber.mil/stigs/)
+- [Microsoft Security Baselines](https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-security-configuration-framework/security-compliance-toolkit-10)
+- [NIST SP 800-128 — Configuration Management](https://csrc.nist.gov/publications/detail/sp/800-128/final)

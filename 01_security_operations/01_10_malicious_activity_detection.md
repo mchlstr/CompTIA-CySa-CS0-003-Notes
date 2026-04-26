@@ -99,3 +99,18 @@ The CySA+ exam expects you to recognize *indicators* — observable signs that s
 - **MFA fatigue** — push bombing until user approves.
 
 **Exam tip:** know the indicator-to-source mapping. Bandwidth spike = network. Cryptominer CPU = host. Account enum = application. Lookalike domain = social.
+
+## Related
+
+**Internal:**
+- [01_06 DNS security](01_06_dns_security.md) — DNS-based indicators
+- [01_09 Logs and monitoring](01_09_logs_and_monitoring.md) — where the indicators come from
+- [01_11 Email analysis](01_11_email_analysis.md) — phishing indicators in detail
+- [01_12 File and malware analysis](01_12_file_and_malware_analysis.md) — analyzing suspicious files
+- [01_13 Threat intelligence](01_13_threat_intelligence.md) — context for indicators
+- [03_05 Forensic artifacts](../03_incident_response_management/03_05_forensic_artifacts.md) — host-side investigation
+
+**External:**
+- [MITRE ATT&CK Matrix](https://attack.mitre.org/)
+- [The Pyramid of Pain (David Bianco)](https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html)
+- [SANS — Hunting evil](https://www.sans.org/posters/hunt-evil/)

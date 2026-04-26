@@ -150,3 +150,18 @@ Indicators here: SPF fail, DKIM none, DMARC fail with `p=reject` (the receiver s
 - DMARC `p=none` is **monitoring only** — it does not block anything.
 - Read `Received` headers **bottom up** to trace the path.
 - The `Authentication-Results` header is the receiver's verdict — read it first when analyzing a phishing report.
+
+## Related
+
+**Internal:**
+- [01_06 DNS security](01_06_dns_security.md) — SPF/DKIM/DMARC live in DNS TXT records
+- [01_10 Malicious activity detection](01_10_malicious_activity_detection.md) — broader phishing indicators
+- [01_12 File and malware analysis](01_12_file_and_malware_analysis.md) — for attachments
+- [05_tools — VirusTotal](../05_tools/VirusTotal.md)
+
+**External:**
+- [RFC 7208 — SPF](https://datatracker.ietf.org/doc/html/rfc7208)
+- [RFC 6376 — DKIM](https://datatracker.ietf.org/doc/html/rfc6376)
+- [RFC 7489 — DMARC](https://datatracker.ietf.org/doc/html/rfc7489)
+- [MXToolbox](https://mxtoolbox.com/) — header analyzer + lookups
+- [dmarcian — DMARC Inspector](https://dmarcian.com/dmarc-inspector/)

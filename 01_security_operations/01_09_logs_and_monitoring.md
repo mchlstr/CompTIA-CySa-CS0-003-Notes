@@ -241,3 +241,18 @@ CySA+ assumes you can identify a service from its port number. Memorize the high
 - **161 (SNMP)** — community-string brute force, info disclosure.
 
 **Exam tip:** if you see an alert with port 445 between two internal hosts where they don't normally talk → suspect lateral movement. Port 22 from external IP repeatedly → SSH brute force.
+
+## Related
+
+**Internal:**
+- [01_10 Malicious activity detection](01_10_malicious_activity_detection.md) — what these logs help you spot
+- [01_15 Scripting languages](01_15_scripting_languages.md) — parsing and querying logs
+- [03_05 Forensic artifacts](../03_incident_response_management/03_05_forensic_artifacts.md) — evtx structure, log artifacts
+- [05_tools — Splunk](../05_tools/Splunk.md)
+- [05_tools — Wireshark](../05_tools/Wireshark.md)
+
+**External:**
+- [Microsoft — Windows Event Log Reference](https://learn.microsoft.com/en-us/windows/win32/eventlog/event-logging)
+- [Microsoft — Sysmon](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+- [Ultimate Windows Security — Event ID encyclopedia](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/)
+- [IANA Service Name and Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)

@@ -253,3 +253,18 @@ You don't need to write these for CySA+ but should recognize what they are.
 - Know which language is **native to which OS** (PowerShell = Windows, Bash = Linux).
 - Know **PowerShell event ID 4104** = script block logging (decoded malicious scripts show up here).
 - Understand that scripting is used for **both attack and defense** — same `IEX` syntax in a benign sysadmin script and an attacker dropper.
+
+## Related
+
+**Internal:**
+- [01_09 Logs and monitoring](01_09_logs_and_monitoring.md) — scripts often parse these
+- [01_12 File and malware analysis](01_12_file_and_malware_analysis.md) — hashing, strings, automation
+- [01_14 Threat hunting](01_14_threat_hunting.md) — custom hunt queries
+- [01_16 Process and automation](01_16_process_and_automation.md) — SOAR layers automation on top
+
+**External:**
+- [PowerShell documentation](https://learn.microsoft.com/en-us/powershell/)
+- [Python documentation](https://docs.python.org/3/)
+- [Bash reference manual (GNU)](https://www.gnu.org/software/bash/manual/)
+- [regex101 — interactive regex tester](https://regex101.com/)
+- [Sigma (detection-rule format)](https://github.com/SigmaHQ/sigma)

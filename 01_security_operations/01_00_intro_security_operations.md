@@ -44,3 +44,15 @@ Typical layers, outside-in:
 8. **Administrative** — policies, training, audits.
 
 **Exam angle:** when asked "best control to add" — look for what *layer* is missing, not just what's powerful. Adding another firewall when the gap is endpoint detection won't help.
+
+## Related
+
+**Internal:**
+- [01_01 OS basics](01_01_os_basics.md) — start of the architecture cluster
+- [01_09 Logs and monitoring](01_09_logs_and_monitoring.md) — the SOC's primary console
+- [01_10 Malicious activity detection](01_10_malicious_activity_detection.md) — what the SOC is watching for
+- [01_16 Process and automation](01_16_process_and_automation.md) — how the SOC scales
+
+**External:**
+- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework) — Identify / Protect / Detect / Respond / Recover
+- [SANS SOC Survey](https://www.sans.org/white-papers/) — annual SOC capability benchmarks

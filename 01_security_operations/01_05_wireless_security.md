@@ -115,3 +115,16 @@ Wi-Fi remains one of the easiest attack surfaces in many environments — physic
 - **WPA3** = current best practice (SAE replaces PSK handshake → resists offline crack).
 - If a scenario mentions Aircrack-ng or a `.cap` handshake file → think WPA/WPA2 PSK cracking.
 - If it mentions capturing data on open Wi-Fi → no crypto needed, just monitor mode.
+
+## Related
+
+**Internal:**
+- [01_04 Network architecture](01_04_network_architecture.md) — broader networking context
+- [01_10 Malicious activity detection](01_10_malicious_activity_detection.md) — including rogue devices
+- [05_tools — Aircrack-ng](../05_tools/Aircrack-ng%20Suite.md)
+- [05_tools — Reaver](../05_tools/Reaver.md)
+
+**External:**
+- [Wi-Fi Alliance — WPA3](https://www.wi-fi.org/discover-wi-fi/security)
+- [KRACK Attacks](https://www.krackattacks.com/)
+- [Aircrack-ng documentation](https://www.aircrack-ng.org/documentation.html)

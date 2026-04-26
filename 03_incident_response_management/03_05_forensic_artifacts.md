@@ -217,3 +217,19 @@ Every artifact handled must be tracked end-to-end. Document: what, where, when, 
 - **Order of volatility** — RAM before disk.
 - **Anti-forensics indicators** are themselves evidence — gaps, missing logs, timestomp mismatches all tell a story.
 - **Sysmon and PowerShell logging** are not on by default — if a question mentions rich endpoint logging, check whether it would have been captured at all.
+
+## Related
+
+**Internal:**
+- [01_01 OS basics](../01_security_operations/01_01_os_basics.md) — OS fundamentals these artifacts come from
+- [01_09 Logs and monitoring](../01_security_operations/01_09_logs_and_monitoring.md) — Windows Event IDs, Sysmon
+- [01_12 File and malware analysis](../01_security_operations/01_12_file_and_malware_analysis.md) — file-level deep dive
+- [03_02 Incident response activities](03_02_incident_response_activities.md) — chain of custody, evidence acquisition
+
+**External:**
+- [Volatility 3 documentation](https://volatility3.readthedocs.io/)
+- [Eric Zimmerman tools](https://ericzimmerman.github.io/) — KAPE, MFTECmd, RECmd, etc.
+- [SANS Windows Forensic Analysis Poster](https://www.sans.org/posters/windows-forensic-analysis/)
+- [SANS Linux Forensic Analysis Poster](https://www.sans.org/posters/linux-shell-survival-guide/)
+- [Velociraptor](https://docs.velociraptor.app/) — endpoint visibility & DFIR
+- [auditd documentation (Red Hat)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/chap-system_auditing)

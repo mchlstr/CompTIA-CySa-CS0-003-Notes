@@ -185,3 +185,17 @@ Same encryption goal, on QUIC/UDP. Even harder to inspect than DoH.
 - **DoH challenge for defenders** → loss of network DNS visibility; mitigate with endpoint logging or block known DoH resolvers.
 - **Sinkholing** = redirect bad domains to a controlled IP — both blocks and provides visibility.
 - **AXFR exposure** = misconfigured zone transfer; restrict to authorized secondaries.
+
+## Related
+
+**Internal:**
+- [01_04 Network architecture](01_04_network_architecture.md) — DNS sits at the network foundation
+- [01_10 Malicious activity detection](01_10_malicious_activity_detection.md) — DNS-based indicators
+- [01_11 Email analysis](01_11_email_analysis.md) — SPF/DKIM/DMARC are DNS records
+- [01_12 File and malware analysis](01_12_file_and_malware_analysis.md) — DGAs and DNS C2
+
+**External:**
+- [ICANN — DNSSEC](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en)
+- [RFC 9499 — DNS Terminology](https://datatracker.ietf.org/doc/html/rfc9499)
+- [Cloudflare 1.1.1.1 — DoH/DoT explained](https://developers.cloudflare.com/1.1.1.1/encryption/)
+- [SANS — Detecting DNS tunneling](https://www.sans.org/white-papers/34152/)
