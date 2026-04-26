@@ -17,7 +17,7 @@ Quickly enumerate active hosts and open ports on local networks for reconnaissan
 - Creating lightweight host lists for deeper scanning
 
 ## Tips
-- Not a full vulnerability scanner — combine with Nmap/OpenVAS for depth.  
+- Not a full vulnerability scanner - combine with Nmap/OpenVAS for depth.  
 - Useful for quick adhoc discovery but avoid aggressive scanning on production.
 
 ## References

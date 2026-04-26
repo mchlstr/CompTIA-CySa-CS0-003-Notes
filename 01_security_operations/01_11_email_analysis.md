@@ -1,6 +1,6 @@
 # Email Analysis
 
-Email is the #1 initial-access vector. CySA+ tests both *header analysis* and *email authentication* (SPF/DKIM/DMARC). Expect scenario questions with real headers — be able to identify spoofing, alignment failures, and indicators of phishing.
+Email is the #1 initial-access vector. CySA+ tests both *header analysis* and *email authentication* (SPF/DKIM/DMARC). Expect scenario questions with real headers - be able to identify spoofing, alignment failures, and indicators of phishing.
 
 ## Email authentication: SPF, DKIM, DMARC
 
@@ -34,7 +34,7 @@ These three work together. None of them alone is sufficient.
 - If the signature validates, the message hasn't been tampered with in transit and was authorized by the signing domain.
 
 **Limitations:**
-- DKIM only proves the signing domain authorized the message — *not* that the visible From matches.
+- DKIM only proves the signing domain authorized the message - *not* that the visible From matches.
 - Forwarding usually preserves DKIM (signature stays valid as long as signed headers aren't modified).
 - Key rotation is operational overhead.
 
@@ -44,24 +44,24 @@ These three work together. None of them alone is sufficient.
 
 - DNS record: TXT at `_dmarc.<domain>` (e.g., `v=DMARC1; p=reject; rua=mailto:dmarc@example.com; pct=100`).
 - **Policy (`p=`):**
-  - `none` — monitor only, don't act on failures.
-  - `quarantine` — send failures to spam.
-  - `reject` — refuse failures outright.
-- **Alignment** — the visible `From` domain must match the SPF/DKIM domain (relaxed = same organizational domain, strict = exact match).
+  - `none` - monitor only, don't act on failures.
+  - `quarantine` - send failures to spam.
+  - `reject` - refuse failures outright.
+- **Alignment** - the visible `From` domain must match the SPF/DKIM domain (relaxed = same organizational domain, strict = exact match).
 - **Reporting:**
-  - `rua` — aggregate reports (where to send daily summary XML).
-  - `ruf` — forensic reports (per-failure details).
-- **`pct=`** — percentage of messages to apply the policy to (used during phased rollouts).
+  - `rua` - aggregate reports (where to send daily summary XML).
+  - `ruf` - forensic reports (per-failure details).
+- **`pct=`** - percentage of messages to apply the policy to (used during phased rollouts).
 
 **Why DMARC matters:** it's the only one that protects the **visible From** header (the one users actually see). Without DMARC, an attacker can spoof your-bank.com in the From field even if SPF/DKIM are configured.
 
 ### How they combine
 
 A receiver's check (simplified):
-1. **SPF check** — does sender IP match SPF for envelope-from domain? Pass/fail.
-2. **DKIM check** — does signature validate against published public key? Pass/fail.
-3. **DMARC alignment** — does the visible From domain align with SPF or DKIM domain?
-4. **DMARC policy** — if alignment fails, apply `p=` (none / quarantine / reject).
+1. **SPF check** - does sender IP match SPF for envelope-from domain? Pass/fail.
+2. **DKIM check** - does signature validate against published public key? Pass/fail.
+3. **DMARC alignment** - does the visible From domain align with SPF or DKIM domain?
+4. **DMARC policy** - if alignment fails, apply `p=` (none / quarantine / reject).
 
 **Pass condition:** SPF OR DKIM aligns (only one needs to align for DMARC to pass).
 
@@ -79,26 +79,26 @@ Email headers are added top-down by each server in reverse order: **the last ser
 | `From:` | Visible sender. Trivially spoofed. |
 | `Reply-To:` | Where replies actually go. Often differs from From in phishing. |
 | `Return-Path:` (envelope sender / Mail From) | Where bounces go. SPF checks against this. |
-| `Received:` | Each hop the message took. Multiple of these — read bottom-up. |
+| `Received:` | Each hop the message took. Multiple of these - read bottom-up. |
 | `Message-ID:` | Unique identifier; often reveals originating server. |
 | `Authentication-Results:` | Receiver's verdict on SPF, DKIM, DMARC. |
 | `DKIM-Signature:` | DKIM signature data. |
-| `X-Originating-IP:` | Originating IP (if present — often stripped). |
+| `X-Originating-IP:` | Originating IP (if present - often stripped). |
 | `User-Agent:` / `X-Mailer:` | Sending mail client (Outlook, Thunderbird, custom). |
 | `Subject:`, `Date:` | As shown. |
 | `MIME-Version:`, `Content-Type:` | Body structure. |
 
 ### What to look for (phishing indicators in headers)
 
-- **Mismatch between `From:` and `Return-Path:`** — display says one thing, actual envelope is different.
-- **`Reply-To:` differs from `From:`** — common BEC tactic so replies go to attacker.
-- **Authentication-Results showing `spf=fail` or `dmarc=fail`** — strongest signal.
-- **Originating IP doesn't match the claimed sender's expected infrastructure** — pivot in WHOIS, ASN.
-- **Strange Received chain** — the chain skips expected mail servers, includes IPs in unexpected geographies, or has bizarre timestamps.
+- **Mismatch between `From:` and `Return-Path:`** - display says one thing, actual envelope is different.
+- **`Reply-To:` differs from `From:`** - common BEC tactic so replies go to attacker.
+- **Authentication-Results showing `spf=fail` or `dmarc=fail`** - strongest signal.
+- **Originating IP doesn't match the claimed sender's expected infrastructure** - pivot in WHOIS, ASN.
+- **Strange Received chain** - the chain skips expected mail servers, includes IPs in unexpected geographies, or has bizarre timestamps.
 - **`Message-ID` domain doesn't match `From` domain.**
 - **Very old or future timestamp** in Date.
-- **Suspicious `X-Mailer`** — known phishing toolkits.
-- **Display name spoofing** (`From: "CEO Name" <random@gmail.com>`) — display says CEO, actual address is gmail.
+- **Suspicious `X-Mailer`** - known phishing toolkits.
+- **Display name spoofing** (`From: "CEO Name" <random@gmail.com>`) - display says CEO, actual address is gmail.
 
 ### Sample header excerpt
 
@@ -119,18 +119,18 @@ Authentication-Results: mx.victim.com;
 Subject: Password reset required
 ```
 
-Indicators here: SPF fail, DKIM none, DMARC fail with `p=reject` (the receiver should have rejected it — possible misconfig), Reply-To pointing to ProtonMail (free email), Return-Path on a Russian VPS, originating IP unrelated to the claimed sender.
+Indicators here: SPF fail, DKIM none, DMARC fail with `p=reject` (the receiver should have rejected it - possible misconfig), Reply-To pointing to ProtonMail (free email), Return-Path on a Russian VPS, originating IP unrelated to the claimed sender.
 
 ## Tools
 
-- **MXToolbox** (https://mxtoolbox.com/) — header analyzer, SPF/DKIM/DMARC checkers, MX lookup.
-- **Google Admin Toolbox Messageheader** — paste headers, get parsed view.
-- **dmarcian, EasyDMARC, Postmark DMARC** — DMARC report parsers and dashboards.
-- **emailrep.io** — sender reputation lookup.
-- **PhishTool** — phishing investigation platform.
-- **VirusTotal / urlscan.io** — for any URLs in the message.
-- **Hybrid Analysis / ANY.RUN** — for attachments.
-- **Microsoft 365 / Google Workspace admin consoles** — search and pull copies of suspicious mail org-wide.
+- **MXToolbox** (https://mxtoolbox.com/) - header analyzer, SPF/DKIM/DMARC checkers, MX lookup.
+- **Google Admin Toolbox Messageheader** - paste headers, get parsed view.
+- **dmarcian, EasyDMARC, Postmark DMARC** - DMARC report parsers and dashboards.
+- **emailrep.io** - sender reputation lookup.
+- **PhishTool** - phishing investigation platform.
+- **VirusTotal / urlscan.io** - for any URLs in the message.
+- **Hybrid Analysis / ANY.RUN** - for attachments.
+- **Microsoft 365 / Google Workspace admin consoles** - search and pull copies of suspicious mail org-wide.
 
 ## Other phishing indicators (recap from 01_10)
 
@@ -146,26 +146,26 @@ Indicators here: SPF fail, DKIM none, DMARC fail with `p=reject` (the receiver s
   - SPF protects the envelope sender (Return-Path).
   - DKIM protects message integrity + signing domain.
   - DMARC protects the **visible From** by enforcing alignment.
-- A passing SPF + DKIM does **not** mean the email is safe — it just means it came from authorized infrastructure.
-- DMARC `p=none` is **monitoring only** — it does not block anything.
+- A passing SPF + DKIM does **not** mean the email is safe - it just means it came from authorized infrastructure.
+- DMARC `p=none` is **monitoring only** - it does not block anything.
 - Read `Received` headers **bottom up** to trace the path.
-- The `Authentication-Results` header is the receiver's verdict — read it first when analyzing a phishing report.
+- The `Authentication-Results` header is the receiver's verdict - read it first when analyzing a phishing report.
 
 ---
 
-← Back: [01_10 Malicious Activity Detection](01_10_malicious_activity_detection.md) — Next: [01_12 File & Malware Analysis](01_12_file_and_malware_analysis.md) →
+← Back: [01_10 Malicious Activity Detection](01_10_malicious_activity_detection.md) - Next: [01_12 File & Malware Analysis](01_12_file_and_malware_analysis.md) →
 
 ## Related
 
 **Internal:**
-- [01_06 DNS security](01_06_dns_security.md) — SPF/DKIM/DMARC live in DNS TXT records
-- [01_10 Malicious activity detection](01_10_malicious_activity_detection.md) — broader phishing indicators
-- [01_12 File and malware analysis](01_12_file_and_malware_analysis.md) — for attachments
-- [05_tools — VirusTotal](../05_tools/VirusTotal.md)
+- [01_06 DNS security](01_06_dns_security.md) - SPF/DKIM/DMARC live in DNS TXT records
+- [01_10 Malicious activity detection](01_10_malicious_activity_detection.md) - broader phishing indicators
+- [01_12 File and malware analysis](01_12_file_and_malware_analysis.md) - for attachments
+- [05_tools - VirusTotal](../05_tools/VirusTotal.md)
 
 **External:**
-- [RFC 7208 — SPF](https://datatracker.ietf.org/doc/html/rfc7208)
-- [RFC 6376 — DKIM](https://datatracker.ietf.org/doc/html/rfc6376)
-- [RFC 7489 — DMARC](https://datatracker.ietf.org/doc/html/rfc7489)
-- [MXToolbox](https://mxtoolbox.com/) — header analyzer + lookups
-- [dmarcian — DMARC Inspector](https://dmarcian.com/dmarc-inspector/)
+- [RFC 7208 - SPF](https://datatracker.ietf.org/doc/html/rfc7208)
+- [RFC 6376 - DKIM](https://datatracker.ietf.org/doc/html/rfc6376)
+- [RFC 7489 - DMARC](https://datatracker.ietf.org/doc/html/rfc7489)
+- [MXToolbox](https://mxtoolbox.com/) - header analyzer + lookups
+- [dmarcian - DMARC Inspector](https://dmarcian.com/dmarc-inspector/)

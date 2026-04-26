@@ -7,26 +7,26 @@ SOCs drown in alerts and toil. Automation and process improvement are how teams 
 **The problem:** alert fatigue, repetitive manual work, slow MTTR (mean time to respond), inconsistent handling.
 
 **Improvement frameworks:**
-- **Lean** — eliminate waste in workflows.
-- **Six Sigma** — reduce defects/variance; data-driven.
-- **Kaizen** — continuous incremental improvement.
-- **PDCA (Plan-Do-Check-Act / Deming cycle)** — iterative improvement loop.
+- **Lean** - eliminate waste in workflows.
+- **Six Sigma** - reduce defects/variance; data-driven.
+- **Kaizen** - continuous incremental improvement.
+- **PDCA (Plan-Do-Check-Act / Deming cycle)** - iterative improvement loop.
 
 **Common SOC improvements:**
-- **Tune alerts** — most SIEM rules out-of-the-box are too noisy. Tune to your environment.
-- **Reduce false positives** — every FP investigated is time lost. Suppress, refine, or correlate to filter.
-- **Standardize triage** — playbooks, decision trees so Tier 1 doesn't reinvent the wheel.
-- **Eliminate repetitive tasks** — automate everything done >5x/day.
-- **Measure** — MTTD, MTTR, dwell time, alert volume, FP rate, escalation rate. Improve what you measure.
+- **Tune alerts** - most SIEM rules out-of-the-box are too noisy. Tune to your environment.
+- **Reduce false positives** - every FP investigated is time lost. Suppress, refine, or correlate to filter.
+- **Standardize triage** - playbooks, decision trees so Tier 1 doesn't reinvent the wheel.
+- **Eliminate repetitive tasks** - automate everything done >5x/day.
+- **Measure** - MTTD, MTTR, dwell time, alert volume, FP rate, escalation rate. Improve what you measure.
 
 ## SOAR (Security Orchestration, Automation, and Response)
 
 **SOAR** = platform that orchestrates security tools, automates workflows, and manages cases.
 
 Three pillars:
-- **Orchestration** — connect disparate tools (SIEM, EDR, firewall, ticketing, threat intel) via APIs.
-- **Automation** — execute predefined actions without human intervention (block IP, isolate host, enrich alert).
-- **Response** — manage cases, track incidents, coordinate teams.
+- **Orchestration** - connect disparate tools (SIEM, EDR, firewall, ticketing, threat intel) via APIs.
+- **Automation** - execute predefined actions without human intervention (block IP, isolate host, enrich alert).
+- **Response** - manage cases, track incidents, coordinate teams.
 
 **Major products:** Splunk SOAR (Phantom), Palo Alto Cortex XSOAR, IBM Resilient, Tines, Swimlane, Microsoft Sentinel automation rules.
 
@@ -63,20 +63,20 @@ Three pillars:
 **Single pane of glass (SPOG)** = one console where analysts see everything they need (alerts, telemetry, cases, intel) instead of swivel-chairing between 10 tools.
 
 **Why it matters:**
-- Faster decisions — no context-switch tax.
+- Faster decisions - no context-switch tax.
 - Less missed correlation across tool silos.
 - Easier onboarding (fewer UIs to learn).
 
 **How it's typically achieved:**
-- **SIEM/XDR as the hub** — pull data from everywhere into one search/correlation engine.
-- **SOAR as the workflow layer** — case management, action triggering.
-- **Custom dashboards** — Grafana, Splunk dashboards, Sentinel workbooks.
+- **SIEM/XDR as the hub** - pull data from everywhere into one search/correlation engine.
+- **SOAR as the workflow layer** - case management, action triggering.
+- **Custom dashboards** - Grafana, Splunk dashboards, Sentinel workbooks.
 
 **Reality check:** "single pane of glass" is more aspiration than reality at most orgs. Even with SIEM + SOAR + EDR consolidated, analysts still touch the email gateway, IdP console, and cloud portals separately.
 
 ## Workflow standardization
 
-**Playbooks / runbooks** — documented step-by-step procedures for handling specific scenarios.
+**Playbooks / runbooks** - documented step-by-step procedures for handling specific scenarios.
 - **Playbook** = the higher-level "what we do for X type of incident" (often holds the SOAR automation).
 - **Runbook** = the operator's checklist of detailed steps.
 
@@ -99,17 +99,17 @@ Three pillars:
 
 ---
 
-← Back: [01_15 Scripting Languages for Analysts](01_15_scripting_languages.md) — Next: [02_00 Intro: Vulnerability Management](../02_vulnerability_management/02_00_intro_vulnerability_management.md) →
+← Back: [01_15 Scripting Languages for Analysts](01_15_scripting_languages.md) - Next: [02_00 Intro: Vulnerability Management](../02_vulnerability_management/02_00_intro_vulnerability_management.md) →
 
 ## Related
 
 **Internal:**
-- [01_09 Logs and monitoring](01_09_logs_and_monitoring.md) — the SIEM/EDR data SOAR orchestrates
-- [01_15 Scripting languages](01_15_scripting_languages.md) — the building blocks under SOAR
-- [03_03 Preparation and post-incident](../03_incident_response_management/03_03_preparation_and_post_incident.md) — playbooks live here too
+- [01_09 Logs and monitoring](01_09_logs_and_monitoring.md) - the SIEM/EDR data SOAR orchestrates
+- [01_15 Scripting languages](01_15_scripting_languages.md) - the building blocks under SOAR
+- [03_03 Preparation and post-incident](../03_incident_response_management/03_03_preparation_and_post_incident.md) - playbooks live here too
 
 **External:**
-- [NIST SP 800-61r3 — Incident Response Recommendations (CSF 2.0 Community Profile, April 2025)](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
-- [Gartner — SOAR market guide](https://www.gartner.com/en/information-technology/glossary/security-orchestration-automation-response-soar)
+- [NIST SP 800-61r3 - Incident Response Recommendations (CSF 2.0 Community Profile, April 2025)](https://csrc.nist.gov/pubs/sp/800/61/r3/final)
+- [Gartner - SOAR market guide](https://www.gartner.com/en/information-technology/glossary/security-orchestration-automation-response-soar)
 - [Splunk SOAR (formerly Phantom)](https://www.splunk.com/en_us/products/splunk-security-orchestration-and-automation.html)
-- [Tines — workflow automation](https://www.tines.com/)
+- [Tines - workflow automation](https://www.tines.com/)

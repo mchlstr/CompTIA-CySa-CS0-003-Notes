@@ -1,8 +1,8 @@
 # Memorandum of Understanding (MoU)
 
-> An MoU records a **non-binding** mutual understanding between parties about how they will cooperate. In security contexts it is commonly used for information sharing, joint incident response, third-party access, penetration test engagements, or system interconnection. For binding obligations (payment, liability, IP), use a **contract or Inter-Connection Agreement (ISA / ICA)** instead — and always have legal review before signing.
+> An MoU records a **non-binding** mutual understanding between parties about how they will cooperate. In security contexts it is commonly used for information sharing, joint incident response, third-party access, penetration test engagements, or system interconnection. For binding obligations (payment, liability, IP), use a **contract or Inter-Connection Agreement (ISA / ICA)** instead - and always have legal review before signing.
 
-- **MoU title / reference:** `<short descriptive title — e.g., "Threat Intelligence Sharing MoU between <Org A> and <Org B>">`
+- **MoU title / reference:** `<short descriptive title - e.g., "Threat Intelligence Sharing MoU between <Org A> and <Org B>">`
 - **Effective date:** `<YYYY-MM-DD>`
 - **Expiration / review date:** `<YYYY-MM-DD>` (typical: 1–3 years)
 - **MoU version:** `<x.y>`
@@ -24,7 +24,7 @@ This Memorandum of Understanding is entered into between:
 
 ## 3. Background / Recitals
 
-`<optional paragraph(s) describing why the parties are entering into this MoU — e.g., regulatory drivers, prior collaboration, shared customer base, sector ISAC membership>`
+`<optional paragraph(s) describing why the parties are entering into this MoU - e.g., regulatory drivers, prior collaboration, shared customer base, sector ISAC membership>`
 
 ## 4. Scope
 
@@ -33,7 +33,7 @@ This Memorandum of Understanding is entered into between:
 - `<activity 2>`
 
 **Out of scope:**
-- `<explicitly excluded items — important for avoiding misunderstanding>`
+- `<explicitly excluded items - important for avoiding misunderstanding>`
 
 ## 5. Roles and Responsibilities
 
@@ -48,7 +48,7 @@ This Memorandum of Understanding is entered into between:
 - `<commitment 3>`
 
 ### Joint responsibilities:
-- `<commitment 1 — e.g., quarterly review meeting>`
+- `<commitment 1 - e.g., quarterly review meeting>`
 - `<commitment 2>`
 
 ## 6. Information handling
@@ -56,7 +56,7 @@ This Memorandum of Understanding is entered into between:
 - **Classification of shared information:** `<TLP:RED / AMBER / GREEN / CLEAR per FIRST TLP 2.0, or other classification scheme>`
 - **Permitted use:** `<how the receiving party may use the information>`
 - **Onward sharing:** `<is redistribution allowed? to whom? under what conditions?>`
-- **Storage and protection:** `<minimum security controls — e.g., encrypted at rest, access on need-to-know>`
+- **Storage and protection:** `<minimum security controls - e.g., encrypted at rest, access on need-to-know>`
 - **Retention and destruction:** `<duration; method of destruction at end of MoU>`
 - **Personal data:** `<reference to GDPR / other data protection law; whether a separate Data Processing Agreement (DPA) is required>`
 
@@ -74,7 +74,7 @@ Out-of-band communication channel (in case primary email is unavailable): `<e.g.
 ## 8. Term, Termination, and Review
 
 - **Effective date:** `<YYYY-MM-DD>`
-- **Initial term:** `<duration — typical: 1 year, 2 years, 3 years>`
+- **Initial term:** `<duration - typical: 1 year, 2 years, 3 years>`
 - **Renewal:** `<auto-renew on anniversary unless notice given | requires written renewal>`
 - **Termination for convenience:** either party may terminate by giving `<n>` days written notice to the other party's primary contact.
 - **Termination for cause:** either party may terminate immediately upon material breach.
@@ -123,11 +123,11 @@ This MoU may be amended only in writing, signed by authorised representatives of
 
 ## References
 
-There is **no single mandated MoU format** for cybersecurity collaboration — each MoU is tailored. This template synthesises common practice from federal interconnection guidance, ISAC member agreements, and standard contractual frameworks. Always have legal counsel review before signing.
+There is **no single mandated MoU format** for cybersecurity collaboration - each MoU is tailored. This template synthesises common practice from federal interconnection guidance, ISAC member agreements, and standard contractual frameworks. Always have legal counsel review before signing.
 
-- **NIST SP 800-47 Rev. 1 — Managing the Security of Information Exchanges** — covers ISAs / MoUs / MoAs for system interconnection, including required content and lifecycle: https://csrc.nist.gov/pubs/sp/800/47/r1/final
-- **CISA — Information Sharing and Analysis Organizations (ISAOs)** — guidance on member sharing arrangements: https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing
-- **Cyber Information Sharing and Collaboration Program (CISCP) / AIS** — model agreements: https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/automated-indicator-sharing-ais
-- **FIRST Traffic Light Protocol (TLP) 2.0** — for classifying information shared under the MoU: https://www.first.org/tlp/
-- **NIST SP 800-115 §4.2 — Rules of Engagement** — when the MoU covers penetration testing or technical assessment activities: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf
-- **Federal CIO Council — sample interconnection security agreements (ISAs)** — public examples of structured agreements: search csrc.nist.gov for "Interconnection Security Agreement template"
+- **NIST SP 800-47 Rev. 1 - Managing the Security of Information Exchanges** - covers ISAs / MoUs / MoAs for system interconnection, including required content and lifecycle: https://csrc.nist.gov/pubs/sp/800/47/r1/final
+- **CISA - Information Sharing and Analysis Organizations (ISAOs)** - guidance on member sharing arrangements: https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing
+- **Cyber Information Sharing and Collaboration Program (CISCP) / AIS** - model agreements: https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/automated-indicator-sharing-ais
+- **FIRST Traffic Light Protocol (TLP) 2.0** - for classifying information shared under the MoU: https://www.first.org/tlp/
+- **NIST SP 800-115 §4.2 - Rules of Engagement** - when the MoU covers penetration testing or technical assessment activities: https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf
+- **Federal CIO Council - sample interconnection security agreements (ISAs)** - public examples of structured agreements: search csrc.nist.gov for "Interconnection Security Agreement template"

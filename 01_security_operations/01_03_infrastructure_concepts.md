@@ -13,14 +13,14 @@
 
 **Virtualization** = running multiple virtual machines (VMs) on one physical host using a **hypervisor**.
 
-- **Type 1 (bare metal)** — runs directly on hardware. Examples: VMware ESXi, Hyper-V, KVM, Xen. Used in data centers.
-- **Type 2 (hosted)** — runs on top of an OS. Examples: VirtualBox, VMware Workstation. Used on desktops.
+- **Type 1 (bare metal)** - runs directly on hardware. Examples: VMware ESXi, Hyper-V, KVM, Xen. Used in data centers.
+- **Type 2 (hosted)** - runs on top of an OS. Examples: VirtualBox, VMware Workstation. Used on desktops.
 
 **Security concerns:**
-- **VM escape** — guest breaks out to the hypervisor (rare but catastrophic, e.g., VENOM, Cloudburst).
-- **Snapshot management** — old snapshots may contain unpatched OS or sensitive data.
-- **VM sprawl** — unused VMs accumulate, unpatched, forgotten.
-- **Resource contention / side-channel attacks** — Spectre/Meltdown, L1TF.
+- **VM escape** - guest breaks out to the hypervisor (rare but catastrophic, e.g., VENOM, Cloudburst).
+- **Snapshot management** - old snapshots may contain unpatched OS or sensitive data.
+- **VM sprawl** - unused VMs accumulate, unpatched, forgotten.
+- **Resource contention / side-channel attacks** - Spectre/Meltdown, L1TF.
 
 ## Containerization
 
@@ -31,11 +31,11 @@
 - **Image registries:** Docker Hub, ECR, GCR, Harbor.
 
 **Security concerns:**
-- **Vulnerable base images** — pull `latest`, get whatever's in there. Always pin and scan.
-- **Container escape** — break out of container to host (much easier than VM escape).
-- **Misconfigured Kubernetes** — exposed dashboards, overly permissive RBAC, secrets in environment variables.
-- **Supply chain** — compromised images on public registries.
-- **Secrets management** — never bake into images; use vaults (HashiCorp Vault, AWS Secrets Manager, K8s Secrets).
+- **Vulnerable base images** - pull `latest`, get whatever's in there. Always pin and scan.
+- **Container escape** - break out of container to host (much easier than VM escape).
+- **Misconfigured Kubernetes** - exposed dashboards, overly permissive RBAC, secrets in environment variables.
+- **Supply chain** - compromised images on public registries.
+- **Secrets management** - never bake into images; use vaults (HashiCorp Vault, AWS Secrets Manager, K8s Secrets).
 
 **Tools:** Trivy, Clair, Anchore (image scanning); Falco (runtime detection); kube-bench (CIS benchmark for K8s).
 
@@ -50,24 +50,24 @@
 | **Multi-cloud** | Multiple cloud providers | Avoid lock-in, redundancy | Even more complex, more attack surface |
 
 **Shared responsibility model** (critical for exam):
-- **IaaS** (you rent VMs) — provider secures hardware/hypervisor; *you* secure OS, apps, data, IAM.
-- **PaaS** (you rent a platform like App Service, Heroku) — provider secures up to runtime; *you* secure app code, data, IAM.
-- **SaaS** (you use Office 365, Salesforce) — provider secures almost everything; *you* secure data, user access, configuration.
+- **IaaS** (you rent VMs) - provider secures hardware/hypervisor; *you* secure OS, apps, data, IAM.
+- **PaaS** (you rent a platform like App Service, Heroku) - provider secures up to runtime; *you* secure app code, data, IAM.
+- **SaaS** (you use Office 365, Salesforce) - provider secures almost everything; *you* secure data, user access, configuration.
 
 **Exam tip:** "who patches the OS in IaaS?" → the customer. "Who patches the OS in PaaS?" → the provider.
 
 ---
 
-← Back: [01_02 System Hardening & Configuration Management](01_02_system_hardening_and_configs.md) — Next: [01_04 Network Architecture](01_04_network_architecture.md) →
+← Back: [01_02 System Hardening & Configuration Management](01_02_system_hardening_and_configs.md) - Next: [01_04 Network Architecture](01_04_network_architecture.md) →
 
 ## Related
 
 **Internal:**
-- [01_04 Network architecture](01_04_network_architecture.md) — cloud networking concepts
-- [02_07 Cloud-specific vulnerabilities](../02_vulnerability_management/02_07_cloud_specific_vulnerabilities.md) — IAM, S3, K8s, IMDS abuse
-- [02_05 Attack surface and threat modeling](../02_vulnerability_management/02_05_attack_surface_and_threat_modeling.md) — including cloud surface
+- [01_04 Network architecture](01_04_network_architecture.md) - cloud networking concepts
+- [02_07 Cloud-specific vulnerabilities](../02_vulnerability_management/02_07_cloud_specific_vulnerabilities.md) - IAM, S3, K8s, IMDS abuse
+- [02_05 Attack surface and threat modeling](../02_vulnerability_management/02_05_attack_surface_and_threat_modeling.md) - including cloud surface
 
 **External:**
-- [NIST SP 800-145 — Cloud Computing Definition](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)
+- [NIST SP 800-145 - Cloud Computing Definition](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)
 - [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
 - [CNCF Cloud Native Landscape](https://landscape.cncf.io/)

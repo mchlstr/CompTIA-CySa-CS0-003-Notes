@@ -11,7 +11,7 @@
 
 **Source finding(s):** `<vulnerability ID, audit finding, threat assessment reference>`
 
-**Description:** `<plain-language description of the risk being accepted — what could happen?>`
+**Description:** `<plain-language description of the risk being accepted - what could happen?>`
 
 **Affected assets / scope:** `<systems, data, business processes, geographies>`
 
@@ -37,9 +37,9 @@
 
 ## Compensating controls in place
 
-- `<control 1 — e.g., network segmentation isolating the asset>`
-- `<control 2 — e.g., enhanced monitoring with alert on anomalous access>`
-- `<control 3 — e.g., MFA required for any access>`
+- `<control 1 - e.g., network segmentation isolating the asset>`
+- `<control 2 - e.g., enhanced monitoring with alert on anomalous access>`
+- `<control 3 - e.g., MFA required for any access>`
 
 ## Residual risk statement
 
@@ -47,7 +47,7 @@
 
 ## Re-evaluation date
 
-`<YYYY-MM-DD — typically 6 or 12 months>`
+`<YYYY-MM-DD - typically 6 or 12 months>`
 
 ## Approvals
 
@@ -66,11 +66,11 @@
 
 ## References
 
-Risk acceptance documentation isn't standardised in a single template — every framework expects "documented risk acceptance with appropriate authority sign-off" but leaves the form to the organisation. This template synthesises the requirements common to:
+Risk acceptance documentation isn't standardised in a single template - every framework expects "documented risk acceptance with appropriate authority sign-off" but leaves the form to the organisation. This template synthesises the requirements common to:
 
-- **NIST SP 800-39 — Managing Information Security Risk** (organisation, mission, system levels): https://csrc.nist.gov/publications/detail/sp/800-39/final
-- **NIST SP 800-37 Rev. 2 — Risk Management Framework** (Authorize step requires documented risk acceptance by an Authorizing Official): https://csrc.nist.gov/publications/detail/sp/800-37/rev-2/final
-- **NIST SP 800-30 Rev. 1 — Guide for Conducting Risk Assessments** (likelihood × impact tables): https://csrc.nist.gov/publications/detail/sp/800-30/rev-1/final
-- **ISO/IEC 27005 — Information security risk management** (risk treatment options including acceptance): https://www.iso.org/standard/80585.html
-- **ISO 31000 — Risk Management Guidelines**: https://www.iso.org/iso-31000-risk-management.html
-- **PCI DSS v4.x** — Requirement 12.3.1 mandates a documented risk analysis for any case where a control is not met as designed.
+- **NIST SP 800-39 - Managing Information Security Risk** (organisation, mission, system levels): https://csrc.nist.gov/publications/detail/sp/800-39/final
+- **NIST SP 800-37 Rev. 2 - Risk Management Framework** (Authorize step requires documented risk acceptance by an Authorizing Official): https://csrc.nist.gov/publications/detail/sp/800-37/rev-2/final
+- **NIST SP 800-30 Rev. 1 - Guide for Conducting Risk Assessments** (likelihood × impact tables): https://csrc.nist.gov/publications/detail/sp/800-30/rev-1/final
+- **ISO/IEC 27005 - Information security risk management** (risk treatment options including acceptance): https://www.iso.org/standard/80585.html
+- **ISO 31000 - Risk Management Guidelines**: https://www.iso.org/iso-31000-risk-management.html
+- **PCI DSS v4.x** - Requirement 12.3.1 mandates a documented risk analysis for any case where a control is not met as designed.

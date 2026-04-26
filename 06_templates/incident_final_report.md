@@ -1,4 +1,4 @@
-# Incident Final Report — `<Incident ID>`
+# Incident Final Report - `<Incident ID>`
 
 - **Title:** `<short descriptive title>`
 - **Severity (final):** `<Sev N>`
@@ -21,7 +21,7 @@
 
 - **Detection source:** `<SIEM rule | EDR alert | user report | external notification | hunt>`
 - **Initial compromise vector (root cause):** `<phishing | exposed service | credential reuse | supply chain | etc.>`
-- **Affected systems:** `<list — hostnames, services, accounts>`
+- **Affected systems:** `<list - hostnames, services, accounts>`
 - **Affected data:** `<categories, volume, regulated?>`
 - **Affected users / customers:** `<approximate count, who>`
 - **Threat actor (if known/suspected):** `<actor or "unknown">`
@@ -83,7 +83,7 @@
 `<what was done, when, by whom>`
 
 ### Recovery
-`<what was done, when, by whom — including validation>`
+`<what was done, when, by whom - including validation>`
 
 ## Communications log
 
@@ -113,7 +113,7 @@
 
 ## Lessons learned
 
-`<narrative — what the org should take away beyond the action items>`
+`<narrative - what the org should take away beyond the action items>`
 
 ## IOCs (for sharing with ISAC / partners)
 
@@ -134,10 +134,10 @@
 
 This template follows the structure recommended in **NIST SP 800-61r3** and the SANS PICERL framework. It mirrors the reporting structure expected by CISA and most regulators.
 
-- **NIST SP 800-61r3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management (CSF 2.0 Community Profile, April 2025)**: https://csrc.nist.gov/pubs/sp/800/61/r3/final
+- **NIST SP 800-61r3 - Incident Response Recommendations and Considerations for Cybersecurity Risk Management (CSF 2.0 Community Profile, April 2025)**: https://csrc.nist.gov/pubs/sp/800/61/r3/final
 - **SANS Incident Handler's Handbook (PICERL)**: https://www.sans.org/white-papers/33901/
-- **ENISA — Good Practice Guide for Incident Management**: https://www.enisa.europa.eu/publications/good-practice-guide-for-incident-management
-- **CISA — Incident Reporting** (federal incident notification format): https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cisa-coordinated-vulnerability-disclosure-process
-- **DFIR Report** — public real-world intrusion reports follow a similar structure: https://thedfirreport.com/
+- **ENISA - Good Practice Guide for Incident Management**: https://www.enisa.europa.eu/publications/good-practice-guide-for-incident-management
+- **CISA - Incident Reporting** (federal incident notification format): https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cisa-coordinated-vulnerability-disclosure-process
+- **DFIR Report** - public real-world intrusion reports follow a similar structure: https://thedfirreport.com/
 - **MITRE ATT&CK** for IOC / TTP appendix structure: https://attack.mitre.org/
-- **Verizon DBIR methodology** (VERIS — Vocabulary for Event Recording and Incident Sharing) is a more formal taxonomy if you want machine-readable incidents: http://veriscommunity.net/
+- **Verizon DBIR methodology** (VERIS - Vocabulary for Event Recording and Incident Sharing) is a more formal taxonomy if you want machine-readable incidents: http://veriscommunity.net/

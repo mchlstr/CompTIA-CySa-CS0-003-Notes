@@ -4,7 +4,7 @@
 - **Update #:** `<sequential number>`
 - **Time:** `<YYYY-MM-DD HH:MM TZ>`
 - **Author:** `<name, role>`
-- **Distribution:** `<list — IR team, leadership, etc.>`
+- **Distribution:** `<list - IR team, leadership, etc.>`
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## Severity
 
-`<Sev 1 (Critical) / Sev 2 (High) / Sev 3 (Medium) / Sev 4 (Low)>` — `<change since last update, if any>`
+`<Sev 1 (Critical) / Sev 2 (High) / Sev 3 (Medium) / Sev 4 (Low)>` - `<change since last update, if any>`
 
 ## Summary
 
@@ -28,17 +28,17 @@
 
 ## Current actions in flight
 
-- `<action — owner — ETA>`
-- `<action — owner — ETA>`
+- `<action - owner - ETA>`
+- `<action - owner - ETA>`
 
 ## Next steps (next 1–4 hours)
 
-- `<planned action — owner>`
-- `<planned action — owner>`
+- `<planned action - owner>`
+- `<planned action - owner>`
 
 ## Decisions needed
 
-- `<decision and decider — e.g., "Approve isolation of production segment X — CISO">`
+- `<decision and decider - e.g., "Approve isolation of production segment X - CISO">`
 
 ## Known facts vs. assumptions
 
@@ -57,7 +57,7 @@
 
 ## Next update
 
-`<YYYY-MM-DD HH:MM TZ — or "on significant change">`
+`<YYYY-MM-DD HH:MM TZ - or "on significant change">`
 
 ---
 
@@ -65,8 +65,8 @@
 
 There is no single mandated format for incident status updates. This structure synthesises common SOC and IR-team practice as documented in:
 
-- **NIST SP 800-61r3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management (CSF 2.0 Community Profile, April 2025)** — covers communication and information sharing aligned with CSF 2.0 Respond/Recover functions: https://csrc.nist.gov/pubs/sp/800/61/r3/final
+- **NIST SP 800-61r3 - Incident Response Recommendations and Considerations for Cybersecurity Risk Management (CSF 2.0 Community Profile, April 2025)** - covers communication and information sharing aligned with CSF 2.0 Respond/Recover functions: https://csrc.nist.gov/pubs/sp/800/61/r3/final
 - **SANS Incident Handler's Handbook** (covers communication cadence): https://www.sans.org/white-papers/33901/
-- **ENISA — Good Practice Guide for Incident Management**: https://www.enisa.europa.eu/publications/good-practice-guide-for-incident-management
+- **ENISA - Good Practice Guide for Incident Management**: https://www.enisa.europa.eu/publications/good-practice-guide-for-incident-management
 - **FIRST CSIRT Services Framework** (defines reporting and information-sharing services): https://www.first.org/standards/frameworks/csirts/csirt_services_framework_v2.1
 - **CISA Incident Reporting** template fields (US federal-aligned): https://www.cisa.gov/forms/report

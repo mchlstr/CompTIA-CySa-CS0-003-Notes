@@ -2,21 +2,21 @@
 
 These are scenario walk-throughs that link **IOCs**, **logs**, **threat intelligence**, and the **IR phases** from prior files. Use them to practice the analyst mindset: from a single alert, scope and respond.
 
-## Case 1 — The phishing alert
+## Case 1 - The phishing alert
 
 ### Initial signal
 Tier 1 alert: "User reported a suspicious email." Email is from `it-helpdesk@company-secure.com` (lookalike domain), subject "Password reset required," with link to `https://company-secure.com/login.aspx`.
 
 ### Triage steps
 1. **Quarantine the email** in the mail platform.
-2. **Pull the email headers** — confirm sender IP, SPF/DKIM/DMARC results, mail path.
-3. **Search the mail gateway** — how many other recipients got this?
+2. **Pull the email headers** - confirm sender IP, SPF/DKIM/DMARC results, mail path.
+3. **Search the mail gateway** - how many other recipients got this?
 4. **Threat intel pivot:**
    - Domain age (new = suspicious) → WHOIS, certificate transparency.
    - URL reputation → VirusTotal, URLScan, urlhaus.
    - Hosting infra → ASN, related domains via passive DNS.
-5. **Check if anyone clicked** — proxy / web gateway / EDR network connections to the domain.
-6. **Check if anyone entered credentials** — IdP login telemetry; correlate timestamps.
+5. **Check if anyone clicked** - proxy / web gateway / EDR network connections to the domain.
+6. **Check if anyone entered credentials** - IdP login telemetry; correlate timestamps.
 
 ### Findings
 50 employees received it. 8 clicked. 2 entered credentials. One of those 2 had MFA; the other (an IT admin) did not.
@@ -24,9 +24,9 @@ Tier 1 alert: "User reported a suspicious email." Email is from `it-helpdesk@com
 ### Response
 - **Containment:** disable the IT admin account, reset password, revoke active sessions and refresh tokens, force re-MFA on next login.
 - **Eradication:** delete the email org-wide. Add sender domain + URL to block list. WAF / proxy block.
-- **Recovery:** re-enable accounts after credential reset and MFA enrollment for the 2 affected. Monitor for residual access (suspicious logins, mailbox forwarding rules — common attacker move).
+- **Recovery:** re-enable accounts after credential reset and MFA enrollment for the 2 affected. Monitor for residual access (suspicious logins, mailbox forwarding rules - common attacker move).
 - **Post-incident:**
-  - **Lessons:** an admin account without MFA — fix policy gap.
+  - **Lessons:** an admin account without MFA - fix policy gap.
   - **Detection:** add SIEM rule for new mailbox forwarding rules (common BEC indicator).
   - **Training:** targeted phishing training for the impacted users.
 
@@ -38,7 +38,7 @@ Tier 1 alert: "User reported a suspicious email." Email is from `it-helpdesk@com
 
 ---
 
-## Case 2 — The beaconing host
+## Case 2 - The beaconing host
 
 ### Initial signal
 Zeek logs show one workstation connecting to `203.0.113.45:443` every ~60 seconds, ±5 sec jitter, for the past 14 hours. ~150 bytes per request.
@@ -62,18 +62,18 @@ Zeek logs show one workstation connecting to `203.0.113.45:443` every ~60 second
 
 ### Findings
 - IP flagged by 8 threat feeds as Cobalt Strike C2.
-- Process: `svchost.exe` (legitimate-looking, but parent is `winword.exe` — anomaly).
+- Process: `svchost.exe` (legitimate-looking, but parent is `winword.exe` - anomaly).
 - Beaconing started 3 days ago, right after user opened an email attachment "Q3-Report.docm" (macro-enabled).
 - Two other hosts also beaconing to related infra.
 
 ### Response
-- **Scope first** — find all affected hosts before containing (otherwise attacker pivots and re-establishes).
+- **Scope first** - find all affected hosts before containing (otherwise attacker pivots and re-establishes).
 - **Containment (coordinated, not piecemeal):** isolate all 3 hosts via EDR network containment simultaneously. Block C2 IP at firewall.
 - **Eradication:** rebuild affected hosts from clean image. Search org-wide for the malicious doc hash (delete from mailboxes and file shares). Patch the Office macro policy gap (block macros from internet).
 - **Recovery:** restore user data from clean backups. Heightened monitoring on those users for 30 days.
 - **Post-incident:**
-  - Detection: add SIEM rule for `winword.exe` spawning unusual children (a common ATT&CK technique — T1059).
-  - Process: review Office macro group policy — should be "block macros from internet" by default.
+  - Detection: add SIEM rule for `winword.exe` spawning unusual children (a common ATT&CK technique - T1059).
+  - Process: review Office macro group policy - should be "block macros from internet" by default.
 
 ### Frameworks applied
 - **Kill Chain:** Delivery (email) → Exploitation (macro) → Installation (CS implant) → C2 (beaconing). Caught at C2; future detections aim for earlier (Delivery via mail filtering, Exploitation via macro block).
@@ -82,22 +82,22 @@ Zeek logs show one workstation connecting to `203.0.113.45:443` every ~60 second
 
 ---
 
-## Case 3 — The impossible travel alert
+## Case 3 - The impossible travel alert
 
 ### Initial signal
 SIEM alert: same user account logged in from New York at 14:00 and from Singapore at 14:35. Physically impossible.
 
 ### Triage
-1. **Confirm both events** — IdP logs, source IPs, user-agents.
-2. **Check VPN / corporate proxy** — could one of them be a proxied connection? (False positive cause.)
-3. **Check device** — same device fingerprint? Different?
-4. **Check what the account did** in each session — anything sensitive accessed?
-5. **MFA status** — was MFA prompted in both? If yes, who approved?
+1. **Confirm both events** - IdP logs, source IPs, user-agents.
+2. **Check VPN / corporate proxy** - could one of them be a proxied connection? (False positive cause.)
+3. **Check device** - same device fingerprint? Different?
+4. **Check what the account did** in each session - anything sensitive accessed?
+5. **MFA status** - was MFA prompted in both? If yes, who approved?
 
 ### Findings
 - NY = legitimate user, on company laptop, normal activity.
 - Singapore = different device fingerprint, accessed SharePoint and downloaded customer list, then created a mailbox forwarding rule sending all mail to an external Gmail.
-- MFA was approved in Singapore — possibly via push fatigue or MFA bypass token.
+- MFA was approved in Singapore - possibly via push fatigue or MFA bypass token.
 
 ### Response
 - **Containment:** disable account, revoke all active sessions and refresh tokens, force MFA re-enroll, remove forwarding rule.
@@ -110,40 +110,40 @@ SIEM alert: same user account logged in from New York at 14:00 and from Singapor
 - Add detection for new mailbox forwarding rules.
 - Add detection for OAuth grants to unusual apps.
 - Move from push-only MFA to **number matching** or hardware tokens (FIDO2) for high-privilege accounts.
-- Conditional access policies — block sign-ins from unmanaged devices for sensitive data.
+- Conditional access policies - block sign-ins from unmanaged devices for sensitive data.
 
 ---
 
-## Case 4 — The ransomware
+## Case 4 - The ransomware
 
 ### Initial signal
 3 AM page: file server alerting, mass file modifications in last 30 min. EDR on multiple servers reporting ransomware behavior. User reports starting to come in.
 
-### Triage (fast — minutes matter)
+### Triage (fast - minutes matter)
 1. **Confirm scope:** how many hosts are encrypting? Which network segments?
 2. **Identify the variant** if possible (note file extensions, ransom note name, ID Ransomware site).
 3. **Check entry vector quickly:** any auth anomalies in last 24-48h? RDP brute force? Phishing? Vulnerable internet-facing service?
 
 ### Containment (aggressive)
-- **Network isolation** of affected hosts — pull cable / VLAN quarantine / EDR isolation.
+- **Network isolation** of affected hosts - pull cable / VLAN quarantine / EDR isolation.
 - **Block lateral spread:** disable SMB on affected segments, block RDP between segments.
 - **Disable compromised accounts** identified.
 - **Snapshot file shares** if storage allows (pre-encryption state, useful for recovery).
-- **If AD compromised:** rotate krbtgt password (twice, 10+ hours apart) — invalidates Kerberos golden tickets.
-- **DON'T just power off** — lose memory forensics. EDR isolation is preferred.
+- **If AD compromised:** rotate krbtgt password (twice, 10+ hours apart) - invalidates Kerberos golden tickets.
+- **DON'T just power off** - lose memory forensics. EDR isolation is preferred.
 
 ### Eradication & recovery
 - Identify and close the entry vector.
 - Wipe and rebuild infected hosts.
-- **Restore from backups** — verified clean (test in isolated environment first; many ransomware groups infect backups).
-- **Decrypt if possible** — check NoMoreRansom for available decryptors.
-- **Do NOT pay** by default — funds criminal activity, no guarantee, may violate sanctions (OFAC). Decision involves legal, exec, possibly law enforcement.
+- **Restore from backups** - verified clean (test in isolated environment first; many ransomware groups infect backups).
+- **Decrypt if possible** - check NoMoreRansom for available decryptors.
+- **Do NOT pay** by default - funds criminal activity, no guarantee, may violate sanctions (OFAC). Decision involves legal, exec, possibly law enforcement.
 
 ### External obligations
 - **Law enforcement** notification (FBI / IC3 in US, NCSC in UK, local CSIRT).
-- **Cyber insurance** — most policies require notification; failure may void coverage.
-- **Regulators** — depends on data exposed (GDPR 72-hour notice, HIPAA, state breach laws).
-- **Customers / public** — if customer data affected.
+- **Cyber insurance** - most policies require notification; failure may void coverage.
+- **Regulators** - depends on data exposed (GDPR 72-hour notice, HIPAA, state breach laws).
+- **Customers / public** - if customer data affected.
 
 ### Post-incident
 - Root cause: how did they get in? (Often: unpatched VPN, weak RDP creds, phishing, supply chain).
@@ -155,25 +155,25 @@ SIEM alert: same user account logged in from New York at 14:00 and from Singapor
 ## Cross-cutting analyst skills these cases test
 
 - **Pivoting** from one IOC to others (URL → domain → IP → other domains → other affected users).
-- **Scoping before action** — never contain before you understand the breadth.
-- **Correlating across log sources** — endpoint + network + identity together.
-- **Knowing when to use which framework** — Kill Chain for sequence, ATT&CK for technique mapping, Diamond for analytical pivot.
+- **Scoping before action** - never contain before you understand the breadth.
+- **Correlating across log sources** - endpoint + network + identity together.
+- **Knowing when to use which framework** - Kill Chain for sequence, ATT&CK for technique mapping, Diamond for analytical pivot.
 - **Distinguishing symptoms from root causes**.
-- **Communicating clearly under pressure** — to execs, users, regulators.
+- **Communicating clearly under pressure** - to execs, users, regulators.
 
-**Exam tip:** scenario questions often ask "what should the analyst do *next*" — pick the option that follows IR best practice (scope before contain, contain before eradicate, document throughout, escalate when criteria met). Avoid the "act fast" answer that skips a phase.
+**Exam tip:** scenario questions often ask "what should the analyst do *next*" - pick the option that follows IR best practice (scope before contain, contain before eradicate, document throughout, escalate when criteria met). Avoid the "act fast" answer that skips a phase.
 
 ---
 
-← Back: [03_03 Preparation & Post-Incident](03_03_preparation_and_post_incident.md) — Next: [03_05 Forensic Artifacts](03_05_forensic_artifacts.md) →
+← Back: [03_03 Preparation & Post-Incident](03_03_preparation_and_post_incident.md) - Next: [03_05 Forensic Artifacts](03_05_forensic_artifacts.md) →
 
 ## Related
 
 **Internal:**
-- [03_01 Attack methodology frameworks](03_01_attack_methodology_frameworks.md) — referenced throughout
-- [03_02 Incident response activities](03_02_incident_response_activities.md) — phases in action
-- [03_05 Forensic artifacts](03_05_forensic_artifacts.md) — evidence collected during cases
-- [01_10 Malicious activity detection](../01_security_operations/01_10_malicious_activity_detection.md) — initial signals
+- [03_01 Attack methodology frameworks](03_01_attack_methodology_frameworks.md) - referenced throughout
+- [03_02 Incident response activities](03_02_incident_response_activities.md) - phases in action
+- [03_05 Forensic artifacts](03_05_forensic_artifacts.md) - evidence collected during cases
+- [01_10 Malicious activity detection](../01_security_operations/01_10_malicious_activity_detection.md) - initial signals
 
 **External:**
 - [MITRE ATT&CK technique pages](https://attack.mitre.org/techniques/enterprise/)

@@ -5,18 +5,18 @@
 **PKI** = the framework of policies, hardware, software, and procedures for creating, managing, distributing, and revoking digital certificates.
 
 Components:
-- **CA (Certificate Authority)** — issues and signs certificates. Root CA → intermediate CAs → end-entity certs (chain of trust).
-- **RA (Registration Authority)** — verifies identity before the CA issues a cert.
-- **CRL (Certificate Revocation List)** — list of revoked certs; clients should check.
-- **OCSP (Online Certificate Status Protocol)** — real-time revocation check; lighter than CRL.
-- **OCSP stapling** — server attaches a fresh OCSP response to its TLS handshake (privacy + performance win).
+- **CA (Certificate Authority)** - issues and signs certificates. Root CA → intermediate CAs → end-entity certs (chain of trust).
+- **RA (Registration Authority)** - verifies identity before the CA issues a cert.
+- **CRL (Certificate Revocation List)** - list of revoked certs; clients should check.
+- **OCSP (Online Certificate Status Protocol)** - real-time revocation check; lighter than CRL.
+- **OCSP stapling** - server attaches a fresh OCSP response to its TLS handshake (privacy + performance win).
 
 Certificate types:
-- **DV (Domain Validated)** — proves you control the domain. Cheapest, fastest, most common.
-- **OV (Organization Validated)** — also verifies the organization exists.
-- **EV (Extended Validation)** — strict identity vetting; used to give the green address bar (mostly deprecated visually now).
-- **Wildcard** — `*.example.com`; covers all subdomains.
-- **SAN** — Subject Alternative Name; one cert covers multiple domains.
+- **DV (Domain Validated)** - proves you control the domain. Cheapest, fastest, most common.
+- **OV (Organization Validated)** - also verifies the organization exists.
+- **EV (Extended Validation)** - strict identity vetting; used to give the green address bar (mostly deprecated visually now).
+- **Wildcard** - `*.example.com`; covers all subdomains.
+- **SAN** - Subject Alternative Name; one cert covers multiple domains.
 
 **Key management** is the hard part. Lose the private key = lose trust. Compromise of the CA = catastrophic (DigiNotar, 2011).
 
@@ -32,25 +32,25 @@ How it works:
 **Benefits:** see malware in encrypted traffic, enforce DLP, detect C2.
 
 **Concerns:**
-- **Privacy** — exempt sensitive sites (banking, healthcare).
-- **Cert pinning** — apps that pin certs (banking apps, Office) will fail; need exceptions.
-- **Performance overhead** — TLS termination is expensive.
-- **Compliance** — some regulations restrict decryption of certain data.
+- **Privacy** - exempt sensitive sites (banking, healthcare).
+- **Cert pinning** - apps that pin certs (banking apps, Office) will fail; need exceptions.
+- **Performance overhead** - TLS termination is expensive.
+- **Compliance** - some regulations restrict decryption of certain data.
 
 ## DLP (Data Loss Prevention)
 
 **DLP** = technology and policies that prevent sensitive data from leaving the organization (or being misused internally).
 
 Three modes:
-- **Data at rest** — scanning storage (file shares, databases, endpoints) for sensitive content.
-- **Data in motion** — inspecting network traffic (email, web, file transfers) for sensitive data leaving.
-- **Data in use** — endpoint DLP watching clipboard, USB writes, screenshots, printing.
+- **Data at rest** - scanning storage (file shares, databases, endpoints) for sensitive content.
+- **Data in motion** - inspecting network traffic (email, web, file transfers) for sensitive data leaving.
+- **Data in use** - endpoint DLP watching clipboard, USB writes, screenshots, printing.
 
 Detection methods:
-- **Pattern matching** — regex for credit card numbers (Luhn check), SSNs.
-- **Keyword/dictionary** — words like "confidential," "proprietary."
-- **File fingerprinting** — exact match of known sensitive documents.
-- **Statistical / ML** — context-aware classification.
+- **Pattern matching** - regex for credit card numbers (Luhn check), SSNs.
+- **Keyword/dictionary** - words like "confidential," "proprietary."
+- **File fingerprinting** - exact match of known sensitive documents.
+- **Statistical / ML** - context-aware classification.
 
 **Tools:** Microsoft Purview (formerly Microsoft Information Protection), Symantec DLP, Forcepoint, Netskope, Zscaler.
 
@@ -64,20 +64,20 @@ Detection methods:
 Regulations: **GDPR (EU), CCPA/CPRA (California), HIPAA (US health), PIPEDA (Canada), LGPD (Brazil)**. CySA+ leans US-centric but knows GDPR.
 
 **Protection techniques:**
-- **Encryption** — at rest and in transit.
-- **Tokenization** — replace sensitive value with a non-sensitive token; mapping in a secure vault.
-- **Masking** — show only partial data (e.g., `***-**-1234`).
-- **Anonymization** — irreversibly remove identifying info.
-- **Pseudonymization** — replace identifiers with pseudonyms; reversible with key (GDPR concept).
+- **Encryption** - at rest and in transit.
+- **Tokenization** - replace sensitive value with a non-sensitive token; mapping in a secure vault.
+- **Masking** - show only partial data (e.g., `***-**-1234`).
+- **Anonymization** - irreversibly remove identifying info.
+- **Pseudonymization** - replace identifiers with pseudonyms; reversible with key (GDPR concept).
 
-## CHD (Cardholder Data) — PCI DSS
+## CHD (Cardholder Data) - PCI DSS
 
 **CHD** = data on payment cards. Governed by **PCI DSS** (Payment Card Industry Data Security Standard).
 
 Three categories:
-- **PAN (Primary Account Number)** — the 16-digit card number. Most sensitive; if stored, must be encrypted/tokenized.
-- **Cardholder name, expiration date, service code** — sensitive but less so.
-- **SAD (Sensitive Authentication Data)** — full track data, CVV, PIN. **Never** stored after authorization, even encrypted.
+- **PAN (Primary Account Number)** - the 16-digit card number. Most sensitive; if stored, must be encrypted/tokenized.
+- **Cardholder name, expiration date, service code** - sensitive but less so.
+- **SAD (Sensitive Authentication Data)** - full track data, CVV, PIN. **Never** stored after authorization, even encrypted.
 
 **PCI DSS scope** = any system that stores, processes, or transmits CHD. Reduce scope = reduce audit pain. Tokenization is the standard scope-reduction technique.
 
@@ -85,24 +85,24 @@ Three categories:
 
 ## Other sensitive data categories
 
-- **PHI (Protected Health Information)** — HIPAA-regulated medical data.
-- **IP (Intellectual Property)** — source code, trade secrets, designs.
-- **Financial data** — non-PCI: bank account numbers, financial reports (SOX-relevant).
-- **Government/classified** — controlled by clearance levels (Confidential, Secret, Top Secret).
+- **PHI (Protected Health Information)** - HIPAA-regulated medical data.
+- **IP (Intellectual Property)** - source code, trade secrets, designs.
+- **Financial data** - non-PCI: bank account numbers, financial reports (SOX-relevant).
+- **Government/classified** - controlled by clearance levels (Confidential, Secret, Top Secret).
 
 ---
 
-← Back: [01_07 Identity and Access Management (IAM)](01_07_identity_and_access_management.md) — Next: [01_09 Logs and Monitoring](01_09_logs_and_monitoring.md) →
+← Back: [01_07 Identity and Access Management (IAM)](01_07_identity_and_access_management.md) - Next: [01_09 Logs and Monitoring](01_09_logs_and_monitoring.md) →
 
 ## Related
 
 **Internal:**
-- [01_07 Identity and access management](01_07_identity_and_access_management.md) — PKI underpins SSO/federation
-- [01_11 Email analysis](01_11_email_analysis.md) — DKIM uses public-key crypto over DNS
-- [04_01 Vulnerability reporting](../04_reporting_and_communication/04_01_vulnerability_reporting.md) — PCI / HIPAA / SOX compliance reporting
+- [01_07 Identity and access management](01_07_identity_and_access_management.md) - PKI underpins SSO/federation
+- [01_11 Email analysis](01_11_email_analysis.md) - DKIM uses public-key crypto over DNS
+- [04_01 Vulnerability reporting](../04_reporting_and_communication/04_01_vulnerability_reporting.md) - PCI / HIPAA / SOX compliance reporting
 
 **External:**
-- [NIST SP 800-57 — Key Management Recommendations](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final)
+- [NIST SP 800-57 - Key Management Recommendations](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final)
 - [PCI DSS Standards](https://www.pcisecuritystandards.org/)
 - [HHS HIPAA Security Rule](https://www.hhs.gov/hipaa/for-professionals/security/index.html)
 - [CA/Browser Forum (TLS cert standards)](https://cabforum.org/)
